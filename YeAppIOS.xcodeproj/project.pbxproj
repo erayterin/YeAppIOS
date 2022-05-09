@@ -13,6 +13,8 @@
 		72A2925F28281273001FD25F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72A2925D28281273001FD25F /* Main.storyboard */; };
 		72A2926128281275001FD25F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72A2926028281275001FD25F /* Assets.xcassets */; };
 		72A2926428281275001FD25F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72A2926228281275001FD25F /* LaunchScreen.storyboard */; };
+		DC875621282940AF005DDF47 /* GirisYapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC875620282940AF005DDF47 /* GirisYapViewController.swift */; };
+		DC875624282941BD005DDF47 /* UyeOlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC875623282941BD005DDF47 /* UyeOlViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		72A2926028281275001FD25F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		72A2926328281275001FD25F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		72A2926528281275001FD25F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC875620282940AF005DDF47 /* GirisYapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GirisYapViewController.swift; sourceTree = "<group>"; };
+		DC875623282941BD005DDF47 /* UyeOlViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UyeOlViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				72A2926028281275001FD25F /* Assets.xcassets */,
 				72A2926228281275001FD25F /* LaunchScreen.storyboard */,
 				72A2926528281275001FD25F /* Info.plist */,
+				DC875620282940AF005DDF47 /* GirisYapViewController.swift */,
+				DC875623282941BD005DDF47 /* UyeOlViewController.swift */,
 			);
 			path = YeAppIOS;
 			sourceTree = "<group>";
@@ -137,8 +143,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC875624282941BD005DDF47 /* UyeOlViewController.swift in Sources */,
 				72A2925C28281273001FD25F /* ViewController.swift in Sources */,
 				72A2925828281273001FD25F /* AppDelegate.swift in Sources */,
+				DC875621282940AF005DDF47 /* GirisYapViewController.swift in Sources */,
 				72A2925A28281273001FD25F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
