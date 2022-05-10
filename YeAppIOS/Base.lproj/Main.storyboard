@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cGb-qH-NKU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RnU-yr-MGl">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -263,45 +263,45 @@
             </objects>
             <point key="canvasLocation" x="-2987" y="-1392"/>
         </scene>
-        <!--Profile View Controller-->
+        <!--Item-->
         <scene sceneID="5Ki-sg-BvJ">
             <objects>
-                <viewController id="bcF-K9-VMd" customClass="ProfileViewController" customModule="YeAppIOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Item" id="bcF-K9-VMd" customClass="ProfileViewController" customModule="YeAppIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jBX-rW-hHN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profil" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KRg-kB-d1V">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Profil" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KRg-kB-d1V">
                                 <rect key="frame" x="78" y="65" width="145" height="72"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="60"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Merhaba Admin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wy6-fZ-RG6">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Merhaba Admin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wy6-fZ-RG6">
                                 <rect key="frame" x="109" y="145" width="222" height="36"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Siparişlerim" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jF3-5l-Kj9">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Siparişlerim" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jF3-5l-Kj9">
                                 <rect key="frame" x="156" y="192" width="102" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" name="orange"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ürün Arayları" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Heq-vg-IHB">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Ürün Arayları" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Heq-vg-IHB">
                                 <rect key="frame" x="150" y="229" width="114" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" name="orange"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Çıkış Yap" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fJT-P6-LU7">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Çıkış Yap" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fJT-P6-LU7">
                                 <rect key="frame" x="167" y="266" width="80" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" name="orange"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ad soyad girin" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Fn-Q3-81h">
+                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ad soyad girin" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Fn-Q3-81h">
                                 <rect key="frame" x="55" y="324" width="304" height="34"/>
                                 <color key="backgroundColor" systemColor="systemGray4Color"/>
                                 <constraints>
@@ -310,7 +310,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Adres girin" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nKv-MA-YSB">
+                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Adres girin" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nKv-MA-YSB">
                                 <rect key="frame" x="55" y="375" width="304" height="34"/>
                                 <color key="backgroundColor" systemColor="systemGray4Color"/>
                                 <constraints>
@@ -319,7 +319,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Telefon numarası girin" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kzf-U0-12c">
+                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Telefon numarası girin" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kzf-U0-12c">
                                 <rect key="frame" x="55" y="424" width="304" height="34"/>
                                 <color key="backgroundColor" systemColor="systemGray4Color"/>
                                 <constraints>
@@ -328,7 +328,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Cüzdan adresi girin" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dIc-iA-pSy">
+                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Cüzdan adresi girin" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dIc-iA-pSy">
                                 <rect key="frame" x="54" y="471" width="304" height="34"/>
                                 <color key="backgroundColor" systemColor="systemGray4Color"/>
                                 <constraints>
@@ -337,7 +337,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mail girin" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Uuf-xn-iiA">
+                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mail girin" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Uuf-xn-iiA">
                                 <rect key="frame" x="54" y="522" width="304" height="34"/>
                                 <color key="backgroundColor" systemColor="systemGray4Color"/>
                                 <constraints>
@@ -346,7 +346,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Şifre girin" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="arn-KL-RzB">
+                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Şifre girin" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="arn-KL-RzB">
                                 <rect key="frame" x="54" y="574" width="304" height="34"/>
                                 <color key="backgroundColor" systemColor="systemGray4Color"/>
                                 <constraints>
@@ -355,7 +355,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Tekrar şifre girin" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vDh-eK-o7Y">
+                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Tekrar şifre girin" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vDh-eK-o7Y">
                                 <rect key="frame" x="54" y="625" width="304" height="34"/>
                                 <color key="backgroundColor" systemColor="systemGray4Color"/>
                                 <constraints>
@@ -364,7 +364,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LkW-HP-Vdz">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LkW-HP-Vdz">
                                 <rect key="frame" x="115" y="711" width="161" height="50"/>
                                 <color key="backgroundColor" name="orange"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
@@ -413,6 +413,7 @@
                             <constraint firstItem="0Fn-Q3-81h" firstAttribute="trailing" secondItem="nKv-MA-YSB" secondAttribute="trailing" id="yTy-oI-2fu"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Profil" image="person" catalog="system" id="RpV-wg-AjS"/>
                     <connections>
                         <outlet property="girisYapBtn" destination="LkW-HP-Vdz" id="Wzm-aP-XeH"/>
                     </connections>
@@ -421,7 +422,7 @@
             </objects>
             <point key="canvasLocation" x="-2141" y="-1392"/>
         </scene>
-        <!--Urun Ayarlari View Controller-->
+        <!--Sepet-->
         <scene sceneID="FK5-rC-k5J">
             <objects>
                 <viewController id="mwa-LL-m6A" customClass="UrunAyarlariViewController" customModule="YeAppIOS" customModuleProvider="target" sceneMemberID="viewController">
@@ -429,25 +430,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ürün Ayarları" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vaf-BR-kVD">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Ürün Ayarları" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vaf-BR-kVD">
                                 <rect key="frame" x="23" y="161" width="329" height="66"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="55"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Merhaba Admin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4vH-7J-OGl">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Merhaba Admin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4vH-7J-OGl">
                                 <rect key="frame" x="84" y="244" width="222" height="36"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Çıkış Yap" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ykD-3o-73D">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Çıkış Yap" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ykD-3o-73D">
                                 <rect key="frame" x="167" y="300" width="80" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" name="orange"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IGV-8B-TXk">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IGV-8B-TXk">
                                 <rect key="frame" x="113" y="357" width="192" height="50"/>
                                 <color key="backgroundColor" name="orange"/>
                                 <constraints>
@@ -461,7 +462,7 @@
                                     <action selector="kategoriEkleBtn:" destination="WTn-yx-tjG" eventType="touchUpInside" id="50C-4E-Fx9"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cRg-36-mA4">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cRg-36-mA4">
                                 <rect key="frame" x="113" y="437" width="192" height="50"/>
                                 <color key="backgroundColor" name="orange"/>
                                 <constraints>
@@ -472,7 +473,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HXH-Vd-wcf">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HXH-Vd-wcf">
                                 <rect key="frame" x="112" y="519" width="193" height="50"/>
                                 <color key="backgroundColor" name="orange"/>
                                 <constraints>
@@ -483,7 +484,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="esG-uC-9Ou">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="esG-uC-9Ou">
                                 <rect key="frame" x="112" y="602" width="193" height="50"/>
                                 <color key="backgroundColor" name="orange"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
@@ -491,7 +492,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MRZ-2e-PsP">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="&lt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MRZ-2e-PsP">
                                 <rect key="frame" x="23" y="38" width="31" height="60"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                 <nil key="textColor"/>
@@ -524,6 +525,7 @@
                             <constraint firstItem="IGV-8B-TXk" firstAttribute="trailing" secondItem="cRg-36-mA4" secondAttribute="trailing" id="ylN-c7-BRF"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Sepet" image="bag" catalog="system" id="OB4-wd-FVB"/>
                     <connections>
                         <outlet property="kategoriEkleBtn" destination="IGV-8B-TXk" id="4Vt-jq-acg"/>
                         <outlet property="urunEkleBtn" destination="cRg-36-mA4" id="0E1-yU-wx8"/>
@@ -1116,7 +1118,7 @@
             </objects>
             <point key="canvasLocation" x="2768" y="-1392"/>
         </scene>
-        <!--Anasayfa View Controller-->
+        <!--Anasayfa-->
         <scene sceneID="bLu-ty-6b1">
             <objects>
                 <viewController id="cGb-qH-NKU" customClass="AnasayfaViewController" customModule="YeAppIOS" customModuleProvider="target" sceneMemberID="viewController">
@@ -1137,7 +1139,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="s65-Wn-W61">
-                                <rect key="frame" x="29" y="371" width="352" height="149"/>
+                                <rect key="frame" x="29" y="322" width="352" height="149"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="149" id="ThG-Y5-YCH"/>
@@ -1194,7 +1196,7 @@
                                 </connections>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kategoriler" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aZu-Cv-7yK">
-                                <rect key="frame" x="29" y="321" width="180" height="42"/>
+                                <rect key="frame" x="29" y="272" width="180" height="42"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -1214,20 +1216,44 @@
                             <constraint firstItem="q9a-Kd-5vc" firstAttribute="top" secondItem="JkP-A5-0mC" secondAttribute="bottom" constant="8" id="ytm-vl-Cu1"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Anasayfa" image="house" catalog="system" id="Gel-3m-sVJ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M5C-xA-Y8a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3550.7246376811595" y="-1399.5535714285713"/>
         </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="btF-i4-p4X">
+            <objects>
+                <tabBarController id="RnU-yr-MGl" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" itemPositioning="centered" id="C1a-wa-gcq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" name="orange"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="bcF-K9-VMd" kind="relationship" relationship="viewControllers" id="Yax-mI-BHG"/>
+                        <segue destination="mwa-LL-m6A" kind="relationship" relationship="viewControllers" id="CQY-VJ-m6Y"/>
+                        <segue destination="cGb-qH-NKU" kind="relationship" relationship="viewControllers" id="NW8-ew-sot"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="emr-U6-Gzf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="299" y="-2456"/>
+        </scene>
     </scenes>
     <resources>
         <image name="arka_plan" width="375" height="306"/>
         <image name="arkayuz" width="180" height="135"/>
+        <image name="bag" catalog="system" width="128" height="128"/>
         <image name="bos" width="21" height="21"/>
         <image name="copy_orange" width="512" height="512"/>
         <image name="hamburger" width="128" height="128"/>
+        <image name="house" catalog="system" width="128" height="106"/>
         <image name="ici_dolu" width="28" height="28"/>
         <image name="onyuz" width="180" height="135"/>
+        <image name="person" catalog="system" width="128" height="117"/>
         <image name="uruneklersm" width="180" height="135"/>
         <namedColor name="orange">
             <color red="0.95686274509803926" green="0.396078431372549" blue="0.14901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
