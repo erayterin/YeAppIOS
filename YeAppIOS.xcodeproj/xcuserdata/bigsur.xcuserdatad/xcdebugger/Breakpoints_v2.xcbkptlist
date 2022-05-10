@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "D47B3A47-A98F-4BE8-A8E6-AA26BBA77334"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E2A58D0C-0496-4A39-81E4-3C8C20E9E93A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "YeAppIOS/AnasayfaViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "AnasayfaViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "E2A58D0C-0496-4A39-81E4-3C8C20E9E93A - 1dd108d9e29f67b9"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "YeAppIOS.AnasayfaViewController.listUrunler.getter : Swift.Array&lt;YeAppIOS.UrunData&gt;"
+                  moduleName = "YeAppIOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bigsur/Documents/YeAppIOS/YeAppIOS/AnasayfaViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "122">
+               </Location>
+               <Location
+                  uuid = "E2A58D0C-0496-4A39-81E4-3C8C20E9E93A - ef637dabb4649fa5"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "YeAppIOS.AnasayfaViewController.listUrunler.setter : Swift.Array&lt;YeAppIOS.UrunData&gt;"
+                  moduleName = "YeAppIOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bigsur/Documents/YeAppIOS/YeAppIOS/AnasayfaViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "148">
+               </Location>
+               <Location
+                  uuid = "E2A58D0C-0496-4A39-81E4-3C8C20E9E93A - 5e004bad2da4c5d6"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "YeAppIOS.AnasayfaViewController.listUrunler.modify : Swift.Array&lt;YeAppIOS.UrunData&gt;"
+                  moduleName = "YeAppIOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bigsur/Documents/YeAppIOS/YeAppIOS/AnasayfaViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "18">
+               </Location>
+               <Location
+                  uuid = "E2A58D0C-0496-4A39-81E4-3C8C20E9E93A - de4468c71f225a55"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "YeAppIOS.AnasayfaViewController.listUrunler.modify : Swift.Array&lt;YeAppIOS.UrunData&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "YeAppIOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bigsur/Documents/YeAppIOS/YeAppIOS/AnasayfaViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  uuid = "E2A58D0C-0496-4A39-81E4-3C8C20E9E93A - c4e22fc4e9b1a05d"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "YeAppIOS.AnasayfaViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; YeAppIOS.AnasayfaViewController"
+                  moduleName = "YeAppIOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bigsur/Documents/YeAppIOS/YeAppIOS/AnasayfaViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "1077">
+               </Location>
+               <Location
+                  uuid = "E2A58D0C-0496-4A39-81E4-3C8C20E9E93A - 29e71f3947e83842"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "YeAppIOS.AnasayfaViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;YeAppIOS.AnasayfaViewController&gt;"
+                  moduleName = "YeAppIOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bigsur/Documents/YeAppIOS/YeAppIOS/AnasayfaViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "1018">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
