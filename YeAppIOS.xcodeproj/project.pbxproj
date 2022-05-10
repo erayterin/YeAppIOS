@@ -18,6 +18,8 @@
 		DC491507282ACA3A00D87897 /* SepetimViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC491506282ACA3A00D87897 /* SepetimViewController.swift */; };
 		DC875621282940AF005DDF47 /* GirisYapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC875620282940AF005DDF47 /* GirisYapViewController.swift */; };
 		DC875624282941BD005DDF47 /* UyeOlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC875623282941BD005DDF47 /* UyeOlViewController.swift */; };
+		DCC6823E282AE748004A9719 /* SiparislerimViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC6823D282AE748004A9719 /* SiparislerimViewController.swift */; };
+		DCC68241282AEC15004A9719 /* SiparisDetayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC68240282AEC15004A9719 /* SiparisDetayViewController.swift */; };
 		DCD36A882829523E00A51496 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD36A872829523E00A51496 /* ViewController.swift */; };
 		DCD36A92282958E100A51496 /* UrunAyarlariViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD36A91282958E100A51496 /* UrunAyarlariViewController.swift */; };
 		DCD36A9528295D3700A51496 /* KategoriEkleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD36A9428295D3700A51496 /* KategoriEkleViewController.swift */; };
@@ -42,6 +44,8 @@
 		DC491506282ACA3A00D87897 /* SepetimViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SepetimViewController.swift; sourceTree = "<group>"; };
 		DC875620282940AF005DDF47 /* GirisYapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GirisYapViewController.swift; sourceTree = "<group>"; };
 		DC875623282941BD005DDF47 /* UyeOlViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UyeOlViewController.swift; sourceTree = "<group>"; };
+		DCC6823D282AE748004A9719 /* SiparislerimViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiparislerimViewController.swift; sourceTree = "<group>"; };
+		DCC68240282AEC15004A9719 /* SiparisDetayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiparisDetayViewController.swift; sourceTree = "<group>"; };
 		DCD36A872829523E00A51496 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DCD36A91282958E100A51496 /* UrunAyarlariViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrunAyarlariViewController.swift; sourceTree = "<group>"; };
 		DCD36A9428295D3700A51496 /* KategoriEkleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KategoriEkleViewController.swift; sourceTree = "<group>"; };
@@ -100,10 +104,10 @@
 				DCD36AA92829750600A51496 /* ProfileViewController.swift */,
 				7245D546282A32C300DCEA57 /* KategoriCollectionViewCell.swift */,
 				7245D549282A335000DCEA57 /* AnasayfaViewController.swift */,
-				7245D54C282A775000DCEA57 /* UrunData.swift */,
-				7245D54F282A7A6600DCEA57 /* UrunTableViewCell.swift */,
 				DC491506282ACA3A00D87897 /* SepetimViewController.swift */,
 				7245D555282AB7FF00DCEA57 /* UrunCollectionViewCell.swift */,
+				DCC6823D282AE748004A9719 /* SiparislerimViewController.swift */,
+				DCC68240282AEC15004A9719 /* SiparisDetayViewController.swift */,
 			);
 			path = YeAppIOS;
 			sourceTree = "<group>";
@@ -178,9 +182,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCC68241282AEC15004A9719 /* SiparisDetayViewController.swift in Sources */,
 				DCD36A92282958E100A51496 /* UrunAyarlariViewController.swift in Sources */,
 				DCD36A882829523E00A51496 /* ViewController.swift in Sources */,
 				DCD36A9D282962A800A51496 /* UrunEkleViewController.swift in Sources */,
+				DCC6823E282AE748004A9719 /* SiparislerimViewController.swift in Sources */,
 				DCD36A9528295D3700A51496 /* KategoriEkleViewController.swift in Sources */,
 				DC875624282941BD005DDF47 /* UyeOlViewController.swift in Sources */,
 				72A2925828281273001FD25F /* AppDelegate.swift in Sources */,
