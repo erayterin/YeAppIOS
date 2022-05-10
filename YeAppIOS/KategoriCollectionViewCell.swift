@@ -11,4 +11,6 @@ class KategoriCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var kategoriUrunImage: UIImageView!
     @IBOutlet weak var kategoriUrunIsim: UILabel!
+    
+    
 }
