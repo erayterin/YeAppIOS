@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		7245D547282A32C300DCEA57 /* KategoriCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7245D546282A32C300DCEA57 /* KategoriCollectionViewCell.swift */; };
 		7245D54A282A335000DCEA57 /* AnasayfaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7245D549282A335000DCEA57 /* AnasayfaViewController.swift */; };
+		7245D54D282A775000DCEA57 /* UrunData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7245D54C282A775000DCEA57 /* UrunData.swift */; };
+		7245D550282A7A6600DCEA57 /* UrunTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7245D54F282A7A6600DCEA57 /* UrunTableViewCell.swift */; };
 		72A2925828281273001FD25F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A2925728281273001FD25F /* AppDelegate.swift */; };
 		72A2925A28281273001FD25F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A2925928281273001FD25F /* SceneDelegate.swift */; };
 		72A2925F28281273001FD25F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72A2925D28281273001FD25F /* Main.storyboard */; };
@@ -29,6 +31,8 @@
 /* Begin PBXFileReference section */
 		7245D546282A32C300DCEA57 /* KategoriCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KategoriCollectionViewCell.swift; sourceTree = "<group>"; };
 		7245D549282A335000DCEA57 /* AnasayfaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnasayfaViewController.swift; sourceTree = "<group>"; };
+		7245D54C282A775000DCEA57 /* UrunData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrunData.swift; sourceTree = "<group>"; };
+		7245D54F282A7A6600DCEA57 /* UrunTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrunTableViewCell.swift; sourceTree = "<group>"; };
 		72A2925428281273001FD25F /* YeAppIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YeAppIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72A2925728281273001FD25F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		72A2925928281273001FD25F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -96,6 +100,8 @@
 				DCD36AA92829750600A51496 /* ProfileViewController.swift */,
 				7245D546282A32C300DCEA57 /* KategoriCollectionViewCell.swift */,
 				7245D549282A335000DCEA57 /* AnasayfaViewController.swift */,
+				7245D54C282A775000DCEA57 /* UrunData.swift */,
+				7245D54F282A7A6600DCEA57 /* UrunTableViewCell.swift */,
 			);
 			path = YeAppIOS;
 			sourceTree = "<group>";
@@ -172,6 +178,7 @@
 			files = (
 				DCD36A92282958E100A51496 /* UrunAyarlariViewController.swift in Sources */,
 				DCD36A882829523E00A51496 /* ViewController.swift in Sources */,
+				7245D54D282A775000DCEA57 /* UrunData.swift in Sources */,
 				DCD36A9D282962A800A51496 /* UrunEkleViewController.swift in Sources */,
 				DCD36A9528295D3700A51496 /* KategoriEkleViewController.swift in Sources */,
 				DC875624282941BD005DDF47 /* UyeOlViewController.swift in Sources */,
@@ -184,6 +191,7 @@
 				72A2925A28281273001FD25F /* SceneDelegate.swift in Sources */,
 				DCD36AA62829714300A51496 /* OdemeYapViewController.swift in Sources */,
 				DCD36AA32829676300A51496 /* UrunSilViewController.swift in Sources */,
+				7245D550282A7A6600DCEA57 /* UrunTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
