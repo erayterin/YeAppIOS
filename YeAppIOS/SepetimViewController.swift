@@ -21,8 +21,8 @@ class SepetimViewController: UIViewController {
     var urunImgTxt = ""
     override func viewDidLoad() {
         super.viewDidLoad()
-        urunImg.image = UIImage(named : urunImgTxt)
-        urunName.text = urunNameTxt
+        /*urunImg.image = UIImage(named : urunImgTxt)
+        urunName.text = urunNameTxt*/
         odemeYapBtn.layer.cornerRadius=15
         odemeYapBtn.layer.masksToBounds=true
         

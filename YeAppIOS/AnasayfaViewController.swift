@@ -19,6 +19,7 @@ class AnasayfaViewController: UIViewController, UICollectionViewDelegate, UIColl
     var urunImg = ["hamburger","hamburger","hamburger"]
     var urunName = ["Hamburger","Pizza","Tavuk"]
     
+    var sepetList = [UrunCollectionViewCell]()
     
    
     
@@ -89,11 +90,15 @@ class AnasayfaViewController: UIViewController, UICollectionViewDelegate, UIColl
 
 extension AnasayfaViewController: UrunCollectionProtocol{
     func sepeteEkle(index: Int) {
-        let sepetVc = storyboard?.instantiateViewController(identifier: "sepetimViewController") as? SepetimViewController
+        /*let sepetVc = storyboard?.instantiateViewController(identifier: "sepetimViewController") as? SepetimViewController
         
         sepetVc?.urunNameTxt = urunName[index]
         sepetVc?.urunImgTxt = urunImg[index]
-        self.navigationController?.pushViewController(sepetVc!, animated: true)
+        self.navigationController?.pushViewController(sepetVc!, animated: true)*/
+        
+        //sepetList.append()
+        
+        
     }
     
     
