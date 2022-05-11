@@ -50,9 +50,21 @@ class AnasayfaViewController: UIViewController, UICollectionViewDelegate, UIColl
             urunCell.urunImg.image = UIImage(named: urunImg[indexPath.row])
             
             urunCell.urunName.text = urunName[indexPath.row]
+            
+            urunCell.index = indexPath
+            
+            urunCell.delegate = self
             return urunCell
         }
         return UICollectionViewCell()
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        /*let sepetVc = storyboard?.instantiateViewController(identifier: "sepetimViewController") as? SepetimViewController
+        
+        sepetVc?.urunNameTxt = urunName[indexPath.row]
+        sepetVc?.urunImgTxt = urunImg[indexPath.row]
+        self.navigationController?.pushViewController(sepetVc!, animated: true)*/
     }
     
     //var kategoriUrunler:[String] = ["hamburger","pizza","chicken","drink","meat","patato"]
@@ -75,3 +87,14 @@ class AnasayfaViewController: UIViewController, UICollectionViewDelegate, UIColl
 }
 
 
+extension AnasayfaViewController: UrunCollectionProtocol{
+    func sepeteEkle(index: Int) {
+        let sepetVc = storyboard?.instantiateViewController(identifier: "sepetimViewController") as? SepetimViewController
+        
+        sepetVc?.urunNameTxt = urunName[index]
+        sepetVc?.urunImgTxt = urunImg[index]
+        self.navigationController?.pushViewController(sepetVc!, animated: true)
+    }
+    
+    
+}
