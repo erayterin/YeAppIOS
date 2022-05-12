@@ -10,11 +10,14 @@
 		7245D547282A32C300DCEA57 /* KategoriCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7245D546282A32C300DCEA57 /* KategoriCollectionViewCell.swift */; };
 		7245D54A282A335000DCEA57 /* AnasayfaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7245D549282A335000DCEA57 /* AnasayfaViewController.swift */; };
 		7245D556282AB7FF00DCEA57 /* UrunCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7245D555282AB7FF00DCEA57 /* UrunCollectionViewCell.swift */; };
+		7245D55B282C09DF00DCEA57 /* Urun.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7245D55A282C09DF00DCEA57 /* Urun.swift */; };
+		7245D55E282CB53400DCEA57 /* Sepet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7245D55D282CB53400DCEA57 /* Sepet.swift */; };
 		72A2925828281273001FD25F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A2925728281273001FD25F /* AppDelegate.swift */; };
 		72A2925A28281273001FD25F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A2925928281273001FD25F /* SceneDelegate.swift */; };
 		72A2925F28281273001FD25F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72A2925D28281273001FD25F /* Main.storyboard */; };
 		72A2926128281275001FD25F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72A2926028281275001FD25F /* Assets.xcassets */; };
 		72A2926428281275001FD25F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72A2926228281275001FD25F /* LaunchScreen.storyboard */; };
+		72D3CE19282CB75D00B74091 /* SepetCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D3CE18282CB75D00B74091 /* SepetCollectionViewCell.swift */; };
 		DC491507282ACA3A00D87897 /* SepetimViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC491506282ACA3A00D87897 /* SepetimViewController.swift */; };
 		DC875621282940AF005DDF47 /* GirisYapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC875620282940AF005DDF47 /* GirisYapViewController.swift */; };
 		DC875624282941BD005DDF47 /* UyeOlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC875623282941BD005DDF47 /* UyeOlViewController.swift */; };
@@ -34,6 +37,8 @@
 		7245D546282A32C300DCEA57 /* KategoriCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KategoriCollectionViewCell.swift; sourceTree = "<group>"; };
 		7245D549282A335000DCEA57 /* AnasayfaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnasayfaViewController.swift; sourceTree = "<group>"; };
 		7245D555282AB7FF00DCEA57 /* UrunCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrunCollectionViewCell.swift; sourceTree = "<group>"; };
+		7245D55A282C09DF00DCEA57 /* Urun.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Urun.swift; sourceTree = "<group>"; };
+		7245D55D282CB53400DCEA57 /* Sepet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sepet.swift; sourceTree = "<group>"; };
 		72A2925428281273001FD25F /* YeAppIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YeAppIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72A2925728281273001FD25F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		72A2925928281273001FD25F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -41,6 +46,7 @@
 		72A2926028281275001FD25F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		72A2926328281275001FD25F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		72A2926528281275001FD25F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		72D3CE18282CB75D00B74091 /* SepetCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SepetCollectionViewCell.swift; sourceTree = "<group>"; };
 		DC491506282ACA3A00D87897 /* SepetimViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SepetimViewController.swift; sourceTree = "<group>"; };
 		DC875620282940AF005DDF47 /* GirisYapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GirisYapViewController.swift; sourceTree = "<group>"; };
 		DC875623282941BD005DDF47 /* UyeOlViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UyeOlViewController.swift; sourceTree = "<group>"; };
@@ -87,11 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				72A2925728281273001FD25F /* AppDelegate.swift */,
-				72A2925928281273001FD25F /* SceneDelegate.swift */,
-				72A2925D28281273001FD25F /* Main.storyboard */,
-				72A2926028281275001FD25F /* Assets.xcassets */,
-				72A2926228281275001FD25F /* LaunchScreen.storyboard */,
-				72A2926528281275001FD25F /* Info.plist */,
+				7245D546282A32C300DCEA57 /* KategoriCollectionViewCell.swift */,
 				DC875620282940AF005DDF47 /* GirisYapViewController.swift */,
 				DC875623282941BD005DDF47 /* UyeOlViewController.swift */,
 				DCD36A872829523E00A51496 /* ViewController.swift */,
@@ -102,12 +104,19 @@
 				DCD36AA22829676300A51496 /* UrunSilViewController.swift */,
 				DCD36AA52829714300A51496 /* OdemeYapViewController.swift */,
 				DCD36AA92829750600A51496 /* ProfileViewController.swift */,
-				7245D546282A32C300DCEA57 /* KategoriCollectionViewCell.swift */,
 				7245D549282A335000DCEA57 /* AnasayfaViewController.swift */,
 				DC491506282ACA3A00D87897 /* SepetimViewController.swift */,
-				7245D555282AB7FF00DCEA57 /* UrunCollectionViewCell.swift */,
 				DCC6823D282AE748004A9719 /* SiparislerimViewController.swift */,
 				DCC68240282AEC15004A9719 /* SiparisDetayViewController.swift */,
+				7245D555282AB7FF00DCEA57 /* UrunCollectionViewCell.swift */,
+				72D3CE18282CB75D00B74091 /* SepetCollectionViewCell.swift */,
+				72A2925928281273001FD25F /* SceneDelegate.swift */,
+				72A2925D28281273001FD25F /* Main.storyboard */,
+				72A2926028281275001FD25F /* Assets.xcassets */,
+				72A2926228281275001FD25F /* LaunchScreen.storyboard */,
+				72A2926528281275001FD25F /* Info.plist */,
+				7245D55A282C09DF00DCEA57 /* Urun.swift */,
+				7245D55D282CB53400DCEA57 /* Sepet.swift */,
 			);
 			path = YeAppIOS;
 			sourceTree = "<group>";
@@ -187,7 +196,9 @@
 				DCD36A882829523E00A51496 /* ViewController.swift in Sources */,
 				DCD36A9D282962A800A51496 /* UrunEkleViewController.swift in Sources */,
 				DCC6823E282AE748004A9719 /* SiparislerimViewController.swift in Sources */,
+				7245D55B282C09DF00DCEA57 /* Urun.swift in Sources */,
 				DCD36A9528295D3700A51496 /* KategoriEkleViewController.swift in Sources */,
+				72D3CE19282CB75D00B74091 /* SepetCollectionViewCell.swift in Sources */,
 				DC875624282941BD005DDF47 /* UyeOlViewController.swift in Sources */,
 				72A2925828281273001FD25F /* AppDelegate.swift in Sources */,
 				7245D54A282A335000DCEA57 /* AnasayfaViewController.swift in Sources */,
@@ -196,6 +207,7 @@
 				DC491507282ACA3A00D87897 /* SepetimViewController.swift in Sources */,
 				DC875621282940AF005DDF47 /* GirisYapViewController.swift in Sources */,
 				7245D556282AB7FF00DCEA57 /* UrunCollectionViewCell.swift in Sources */,
+				7245D55E282CB53400DCEA57 /* Sepet.swift in Sources */,
 				DCD36AA02829657000A51496 /* UrunGuncelleViewController.swift in Sources */,
 				72A2925A28281273001FD25F /* SceneDelegate.swift in Sources */,
 				DCD36AA62829714300A51496 /* OdemeYapViewController.swift in Sources */,
