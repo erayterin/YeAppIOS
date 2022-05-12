@@ -7,9 +7,7 @@
 
 import UIKit
 
-protocol UrunCollectionProtocol {
-    func sepeteEkle(index : Int)
-}
+
 
 class UrunCollectionViewCell: UICollectionViewCell {
     
@@ -19,20 +17,69 @@ class UrunCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var urunPrice: UILabel!
     
     
+    
     var urunSayisi: Int = 1
     
-    var delegate: UrunCollectionProtocol?
-    var index: IndexPath?
     
-    @IBAction func septEkleBtn(_ sender: Any) {
-        delegate?.sepeteEkle(index: (index?.row)!)
+    
+    
+    
+    
+    @IBAction func sptEkle(_ sender: Any) {
+        
+        if Sepet.sepet.urunSepetList.count > 0{
+            
+            if urunKontrol() == false{
+                Sepet.sepet.urunSepetList.append(
+                    Urun(
+                        urunImg: urunImg.image!,
+                        urunName: urunName.text!,
+                        urunCount: urunCount.text!,
+                        urunPrice: urunPrice.text!))
+            }
+        }
+        else{
+            Sepet.sepet.urunSepetList.append(
+                Urun(
+                    urunImg: urunImg.image!,
+                    urunName: urunName.text!,
+                    urunCount: urunCount.text!,
+                    urunPrice: urunPrice.text!))
+        }
+        
+        //print(urunPrice.text)
+        
+        /*for urunSepet in Sepet.sepet.urunSepetList {
+            print(urunSepet.urunName+" ",urunSepet.urunImg)
+        }*/
+        //print("Sepet Count : ", Sepet.sepet.urunSepetList[])
     }
     
-    
-    
-    @IBAction func urunAzaltBtn(_ sender: Any) {
+    func urunKontrol()->Bool{
+        for urunSepet in Sepet.sepet.urunSepetList{
+            if urunSepet.urunName == urunName.text{
+                
+                urunSepet.urunCount = urunSayisiEkle(urunSepetCount: urunSepet.urunCount)
+                print("Ürün Adı : ",urunSepet.urunName ,"Ürün Sayısı : ",urunSepet.urunCount)
+                return true
+            }
+            
+        }
+        return false
+    }
+    func urunSayisiEkle(urunSepetCount:String)->String{
         urunSayisi = (urunCount.text! as NSString).integerValue
         if urunSayisi != 0
+        {
+            urunSayisi += (urunSepetCount as NSString).integerValue
+            
+        }
+        
+        return urunSayisi.description
+    }
+    @IBAction func urunAzaltBtn(_ sender: Any) {
+        urunSayisi = (urunCount.text! as NSString).integerValue
+        if urunSayisi != 1
         {
             urunSayisi = urunSayisi-1
         }
