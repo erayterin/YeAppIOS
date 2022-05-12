@@ -15,6 +15,7 @@
 		72A2925F28281273001FD25F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72A2925D28281273001FD25F /* Main.storyboard */; };
 		72A2926128281275001FD25F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72A2926028281275001FD25F /* Assets.xcassets */; };
 		72A2926428281275001FD25F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72A2926228281275001FD25F /* LaunchScreen.storyboard */; };
+		DC3F8AA4282BFB5E0029BB45 /* SiparisOnayiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3F8AA3282BFB5E0029BB45 /* SiparisOnayiViewController.swift */; };
 		DC491507282ACA3A00D87897 /* SepetimViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC491506282ACA3A00D87897 /* SepetimViewController.swift */; };
 		DC875621282940AF005DDF47 /* GirisYapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC875620282940AF005DDF47 /* GirisYapViewController.swift */; };
 		DC875624282941BD005DDF47 /* UyeOlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC875623282941BD005DDF47 /* UyeOlViewController.swift */; };
@@ -41,6 +42,7 @@
 		72A2926028281275001FD25F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		72A2926328281275001FD25F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		72A2926528281275001FD25F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC3F8AA3282BFB5E0029BB45 /* SiparisOnayiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiparisOnayiViewController.swift; sourceTree = "<group>"; };
 		DC491506282ACA3A00D87897 /* SepetimViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SepetimViewController.swift; sourceTree = "<group>"; };
 		DC875620282940AF005DDF47 /* GirisYapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GirisYapViewController.swift; sourceTree = "<group>"; };
 		DC875623282941BD005DDF47 /* UyeOlViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UyeOlViewController.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 				7245D555282AB7FF00DCEA57 /* UrunCollectionViewCell.swift */,
 				DCC6823D282AE748004A9719 /* SiparislerimViewController.swift */,
 				DCC68240282AEC15004A9719 /* SiparisDetayViewController.swift */,
+				DC3F8AA3282BFB5E0029BB45 /* SiparisOnayiViewController.swift */,
 			);
 			path = YeAppIOS;
 			sourceTree = "<group>";
@@ -199,6 +202,7 @@
 				DCD36AA02829657000A51496 /* UrunGuncelleViewController.swift in Sources */,
 				72A2925A28281273001FD25F /* SceneDelegate.swift in Sources */,
 				DCD36AA62829714300A51496 /* OdemeYapViewController.swift in Sources */,
+				DC3F8AA4282BFB5E0029BB45 /* SiparisOnayiViewController.swift in Sources */,
 				DCD36AA32829676300A51496 /* UrunSilViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
