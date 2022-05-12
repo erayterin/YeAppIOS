@@ -66,10 +66,23 @@ class SepetimViewController: UIViewController, UICollectionViewDelegate, UIColle
             sepetUrunCell.sepetUrunCount.text = Sepet.sepet.urunSepetList[indexPath.row].urunCount
             
             sepetUrunCell.sepetUrunPrice.text = Sepet.sepet.urunSepetList[indexPath.row].urunPrice
+            
+            sepetUrunCell.index = indexPath
+            sepetUrunCell.delegate = self
+            
             return sepetUrunCell
         }
         
         return UICollectionViewCell()
 
     }
+}
+
+extension SepetimViewController:SepetCollectionProtocol{
+    func sepetUrunSil(index: Int) {
+        Sepet.sepet.urunSepetList.remove(at: index)
+        self.loadCollectionData()
+    }
+    
+    
 }
