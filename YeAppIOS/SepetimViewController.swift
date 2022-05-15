@@ -17,13 +17,48 @@ class SepetimViewController: UIViewController, UICollectionViewDelegate, UIColle
     @IBOutlet weak var urunName: UILabel!
     @IBOutlet weak var urunCount: UILabel!
     @IBOutlet weak var urunPrice: UILabel!
-    @IBOutlet weak var odemeYapBtn: UIButton!
     @IBOutlet weak var urunSilImg: UIImageView!
     
+    @IBOutlet weak var araToplamTxt: UILabel!
+    @IBOutlet weak var odemeYapBtn: UIButton!
+    
+    @IBOutlet weak var teslimatUcretiTxt: UILabel!
+    
+    @IBOutlet weak var toplamUcretTxt: UILabel!
     //var urunnImg = ["hamburger","hamburger","hamburger"]
     //var urunnName = ["Hamburger","Pizza","Tavuk"]
     
     
+    @IBAction func odemeYapBtn(_ sender: Any) {
+        performSegue(withIdentifier: "toOdemeYap", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toOdemeYap"{
+            let destinationVC = segue.destination as! OdemeYapViewController
+            destinationVC.araToplamText = araToplamTxt.text!
+            destinationVC.teslimatUcretiText = teslimatUcretiTxt.text!
+            destinationVC.toplamText = toplamUcretTxt.text!
+        }
+    }
+    func sepetHesapla(){
+        
+        
+        araToplamTxt.text = Sepet.sepet.sepetHesapla().description
+        
+        if (araToplamTxt.text as! NSString).integerValue != 0 {
+            toplamUcretTxt.text = (5.0 + Sepet.sepet.sepetHesapla()).description
+        }
+        else{
+            toplamUcretTxt.text = "0"
+        }
+        
+        
+        
+        
+        
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -37,6 +72,7 @@ class SepetimViewController: UIViewController, UICollectionViewDelegate, UIColle
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        sepetHesapla()
         self.loadCollectionData()
                 
     }
@@ -76,13 +112,22 @@ class SepetimViewController: UIViewController, UICollectionViewDelegate, UIColle
         return UICollectionViewCell()
 
     }
+    
+    
 }
 
 extension SepetimViewController:SepetCollectionProtocol{
+    func sepetUrunArttir() {
+        sepetHesapla()
+    }
+    func sepetUrunAzalt() {
+        sepetHesapla()
+    }
     func sepetUrunSil(index: Int) {
         Sepet.sepet.urunSepetList.remove(at: index)
         self.loadCollectionData()
     }
+    
     
     
 }
