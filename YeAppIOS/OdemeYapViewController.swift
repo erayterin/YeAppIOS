@@ -80,7 +80,7 @@ class OdemeYapViewController: UIViewController {
                 // Main Thread'e dahil etme
                 DispatchQueue.main.async {
                     if ((gonderen.elementsEqual(self.ownerAdress)) && (alici.elementsEqual(self.toAdress)) && (amount == self.urunTutari)) {
-                        self.performSegue(withIdentifier: "toSiparisOnay", sender: nil)
+                        self.performSegue(withIdentifier: "toSiparisOnayla", sender: nil)
                     }
                     else{
                         print("islem bool : ",self.islemBool)
