@@ -13,5 +13,16 @@ struct Sepet{
     
     var urunSepetList = Array<Urun>()
     
+    func sepetHesapla()->Double{
+        var sepetToplam:Double = 0
+        if Sepet.sepet.urunSepetList.count>0 {
+            for sepetUrun in Sepet.sepet.urunSepetList{
+                sepetToplam = sepetToplam + ((sepetUrun.urunPrice as NSString).doubleValue * (sepetUrun.urunCount as NSString).doubleValue)
+            }
+            return sepetToplam
+        }
+        
+        return 0
+    }
     
 }

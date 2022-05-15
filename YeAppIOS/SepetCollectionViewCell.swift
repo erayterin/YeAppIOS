@@ -9,6 +9,8 @@ import UIKit
 
 protocol SepetCollectionProtocol {
     func sepetUrunSil(index: Int)
+    func sepetUrunAzalt()
+    func sepetUrunArttir()
 }
 
 class SepetCollectionViewCell: UICollectionViewCell {
@@ -27,21 +29,42 @@ class SepetCollectionViewCell: UICollectionViewCell {
     var delegate : SepetCollectionProtocol?
     var index: IndexPath?
     
+    // Sepet Fonksiyon
+    func sepetUrunCountGuncelle(sepetUrunSayisi:Int)->Bool{
+        for urunSepet in Sepet.sepet.urunSepetList{
+            if urunSepet.urunName == sepetUrunName.text{
+                
+                urunSepet.urunCount = sepetUrunSayisi.description
+                //print("Ürün Adı : ",urunSepet.urunName ,"Ürün Sayısı : ",urunSepet.urunCount)
+                return true
+            }
+            
+        }
+        return false
+    }
+    
+    
     // Button Action
     @IBAction func sepetUrunAzalt(_ sender: Any) {
         sepetUrunSayisi = (sepetUrunCount.text! as NSString).integerValue
         if sepetUrunSayisi != 0
         {
+            
             sepetUrunSayisi = sepetUrunSayisi-1
+            sepetUrunCountGuncelle(sepetUrunSayisi: sepetUrunSayisi)
         }
         
         sepetUrunCount.text = sepetUrunSayisi.description
+        delegate?.sepetUrunAzalt()
     }
     
     @IBAction func sepetUrunArttir(_ sender: Any) {
         sepetUrunSayisi = (sepetUrunCount.text! as NSString).integerValue
         sepetUrunSayisi = sepetUrunSayisi+1
         sepetUrunCount.text = sepetUrunSayisi.description
+        sepetUrunCountGuncelle(sepetUrunSayisi: sepetUrunSayisi)
+        
+        delegate?.sepetUrunArttir()
         //print(sepetUrunImg.image?.description)
     }
     
