@@ -20,8 +20,8 @@
 		72A2925F28281273001FD25F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72A2925D28281273001FD25F /* Main.storyboard */; };
 		72A2926128281275001FD25F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72A2926028281275001FD25F /* Assets.xcassets */; };
 		72A2926428281275001FD25F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72A2926228281275001FD25F /* LaunchScreen.storyboard */; };
+		72C00E2B2831544F0090EFAA /* SiparisOnaylaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C00E2A2831544F0090EFAA /* SiparisOnaylaViewController.swift */; };
 		72D3CE19282CB75D00B74091 /* SepetCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D3CE18282CB75D00B74091 /* SepetCollectionViewCell.swift */; };
-		DC3F8AA4282BFB5E0029BB45 /* SiparisOnayiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3F8AA3282BFB5E0029BB45 /* SiparisOnayiViewController.swift */; };
 		DC3F8AD3282E8CBD0029BB45 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DC3F8AD2282E8CBD0029BB45 /* GoogleService-Info.plist */; };
 		DC3F8AD7282E924F0029BB45 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = DC3F8AD6282E924F0029BB45 /* FirebaseStorage */; };
 		DC3F8AD9282E924F0029BB45 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = DC3F8AD8282E924F0029BB45 /* FirebaseAuth */; };
@@ -58,8 +58,8 @@
 		72A2926028281275001FD25F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		72A2926328281275001FD25F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		72A2926528281275001FD25F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		72C00E2A2831544F0090EFAA /* SiparisOnaylaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiparisOnaylaViewController.swift; sourceTree = "<group>"; };
 		72D3CE18282CB75D00B74091 /* SepetCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SepetCollectionViewCell.swift; sourceTree = "<group>"; };
-		DC3F8AA3282BFB5E0029BB45 /* SiparisOnayiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiparisOnayiViewController.swift; sourceTree = "<group>"; };
 		DC3F8AD2282E8CBD0029BB45 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DC491506282ACA3A00D87897 /* SepetimViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SepetimViewController.swift; sourceTree = "<group>"; };
 		DC875620282940AF005DDF47 /* GirisYapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GirisYapViewController.swift; sourceTree = "<group>"; };
@@ -126,7 +126,6 @@
 				DC491506282ACA3A00D87897 /* SepetimViewController.swift */,
 				DCC6823D282AE748004A9719 /* SiparislerimViewController.swift */,
 				DCC68240282AEC15004A9719 /* SiparisDetayViewController.swift */,
-				DC3F8AA3282BFB5E0029BB45 /* SiparisOnayiViewController.swift */,
 				7245D555282AB7FF00DCEA57 /* UrunCollectionViewCell.swift */,
 				72D3CE18282CB75D00B74091 /* SepetCollectionViewCell.swift */,
 				72A2925928281273001FD25F /* SceneDelegate.swift */,
@@ -140,6 +139,7 @@
 				727A439C283103C100DD162B /* TrxApi.swift */,
 				727A439F283104F100DD162B /* WebService.swift */,
 				72508B6028313EE00082ECEF /* SiparisOnayHataViewController.swift */,
+				72C00E2A2831544F0090EFAA /* SiparisOnaylaViewController.swift */,
 			);
 			path = YeAppIOS;
 			sourceTree = "<group>";
@@ -227,6 +227,7 @@
 				DCC68241282AEC15004A9719 /* SiparisDetayViewController.swift in Sources */,
 				DCD36A92282958E100A51496 /* UrunAyarlariViewController.swift in Sources */,
 				DCD36A882829523E00A51496 /* ViewController.swift in Sources */,
+				72C00E2B2831544F0090EFAA /* SiparisOnaylaViewController.swift in Sources */,
 				DCD36A9D282962A800A51496 /* UrunEkleViewController.swift in Sources */,
 				DCC6823E282AE748004A9719 /* SiparislerimViewController.swift in Sources */,
 				7245D55B282C09DF00DCEA57 /* Urun.swift in Sources */,
@@ -247,7 +248,6 @@
 				DCD36AA02829657000A51496 /* UrunGuncelleViewController.swift in Sources */,
 				72A2925A28281273001FD25F /* SceneDelegate.swift in Sources */,
 				DCD36AA62829714300A51496 /* OdemeYapViewController.swift in Sources */,
-				DC3F8AA4282BFB5E0029BB45 /* SiparisOnayiViewController.swift in Sources */,
 				DCD36AA32829676300A51496 /* UrunSilViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
