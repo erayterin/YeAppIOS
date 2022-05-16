@@ -19,6 +19,7 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var sifreText: UITextField!
     @IBOutlet weak var sifreTekrarText: UITextField!
     @IBOutlet weak var merhabaText: UILabel!
+    @IBOutlet weak var urunAyarlariBtn: UIButton!
     let currentUser=Auth.auth().currentUser!.uid
     let db=Firestore.firestore()
     override func viewDidLoad() {
@@ -26,6 +27,12 @@ class ProfileViewController: UIViewController {
 
         girisYapBtn.layer.cornerRadius=25
         girisYapBtn.layer.masksToBounds=true
+        
+        if currentUser != "ihPSoJT6NLSPwpgdYRTJcVrQfmp2" {
+            urunAyarlariBtn.isHidden=true
+        }else{
+            urunAyarlariBtn.isHidden=false
+        }
         
         
         getProfilBilgi()
