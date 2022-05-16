@@ -27,6 +27,10 @@ class AnasayfaViewController: UIViewController, UICollectionViewDelegate, UIColl
     let currentUser=Auth.auth().currentUser!.uid
     
     var kategoriUrunlerIsim = [String]()
+    var kategoriOnResim = [String]()
+    var kategoriArkaResim = [String]()
+    
+    var secili = 0
     
     
     func getKategori(){
@@ -38,6 +42,12 @@ class AnasayfaViewController: UIViewController, UICollectionViewDelegate, UIColl
                     if let kategoriAd = document.get("kategoriAdi") as? String{
                         self.kategoriUrunlerIsim.append(kategoriAd)
                         self.kategoriCollectionView.reloadData()
+                    }
+                    if let arkaResim = document.get("onUrl") as? String{
+                        self.kategoriArkaResim.append(arkaResim)
+                    }
+                    if let onResim = document.get("arkaUrl") as? String{
+                        self.kategoriOnResim.append(onResim)
                     }
                 }
             }
@@ -61,11 +71,18 @@ class AnasayfaViewController: UIViewController, UICollectionViewDelegate, UIColl
         
         if collectionView == self.kategoriCollectionView{
             let kategoriCell = collectionView.dequeueReusableCell(withReuseIdentifier: "kategoriCell", for: indexPath) as! KategoriCollectionViewCell
+            kategoriCell.delegate = self
+            kategoriCell.index = indexPath
             
-            kategoriCell.kategoriUrunImage.setImage(UIImage(named: "hamburger"), for: .normal)
+            if secili != indexPath.row {
+                kategoriCell.kategoriUrunImage.sd_setImage(with: URL(string: self.kategoriOnResim[indexPath.row]), for: UIControl.State.normal)
+            }else{
+                kategoriCell.kategoriUrunImage.sd_setImage(with: URL(string: self.kategoriArkaResim[indexPath.row]), for: UIControl.State.normal)
+            }
+            
             kategoriCell.kategoriUrunIsim.text = kategoriUrunlerIsim[indexPath.row]
             
-            kategoriCell.delegate = self
+            
             return kategoriCell
         }
         else if collectionView == self.urunCollectionView{
@@ -124,6 +141,11 @@ class AnasayfaViewController: UIViewController, UICollectionViewDelegate, UIColl
 
 
 extension AnasayfaViewController:KategoriCollectionProtocol{
+    func tikla(index : Int) {
+        secili = index
+        kategoriCollectionView.reloadData()
+    }
+    
     func getUrun(kategoriUrunIsim: String) {
         
         self.urunImg.removeAll()
@@ -162,6 +184,8 @@ extension AnasayfaViewController:KategoriCollectionProtocol{
             }
         }
     }
+    
+    
     
     
 }

@@ -1508,7 +1508,9 @@
                                                 <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pOb-oV-ydf">
                                                     <rect key="frame" x="0.0" y="0.0" width="128" height="110"/>
                                                     <constraints>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="110" id="Ux3-HR-86p"/>
                                                         <constraint firstAttribute="height" constant="110" id="gYD-Jd-NiA"/>
+                                                        <constraint firstAttribute="width" constant="128" id="mac-V9-DIh"/>
                                                     </constraints>
                                                     <state key="normal" image="hamburger"/>
                                                     <connections>
@@ -1529,7 +1531,7 @@
                                         </constraints>
                                         <size key="customSize" width="128" height="135"/>
                                         <connections>
-                                            <outlet property="kategoriUrunImage" destination="pOb-oV-ydf" id="djH-HV-mNE"/>
+                                            <outlet property="kategoriUrunImage" destination="pOb-oV-ydf" id="sM6-KN-jbO"/>
                                             <outlet property="kategoriUrunIsim" destination="NYv-Ir-MBO" id="V0U-jR-06x"/>
                                         </connections>
                                     </collectionViewCell>
@@ -2348,7 +2350,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="vyE-Mz-5zv"/>
         <segue reference="JPl-4k-qRc"/>
         <segue reference="RLf-3f-Cp1"/>
         <segue reference="nh3-Uq-MGQ"/>
