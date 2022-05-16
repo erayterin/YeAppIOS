@@ -6,24 +6,21 @@
 //
 
 import UIKit
+import Firebase
 
 class SiparisDetayViewController: UIViewController {
 
+    @IBOutlet weak var tamamlandiBtn: UIButton!
+    let currentUser=Auth.auth().currentUser!.uid
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        if currentUser != "ihPSoJT6NLSPwpgdYRTJcVrQfmp2" {
+            tamamlandiBtn.isHidden=true
+        }else{
+            tamamlandiBtn.isHidden=false
+        }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

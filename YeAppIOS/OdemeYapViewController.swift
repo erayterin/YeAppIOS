@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class OdemeYapViewController: UIViewController {
 
@@ -13,12 +14,17 @@ class OdemeYapViewController: UIViewController {
     @IBOutlet weak var teslimatUcretiTxt: UILabel!
     @IBOutlet weak var toplamTxt: UILabel!
     
+    @IBOutlet weak var adresText: UITextView!
     @IBOutlet weak var odemeBtn: UIButton!
     @IBOutlet weak var kapidaBtn: UIButton!
     @IBOutlet weak var TRXBtn: UIButton!
     @IBOutlet weak var cuzdanKoduText: UILabel!
     @IBOutlet weak var copyBtn: UIButton!
     
+    let currentUser=Auth.auth().currentUser!.uid
+    let db=Firestore.firestore()
+    
+    var odemeSekli = true
     
     
     var araToplamText = "0"
@@ -36,6 +42,8 @@ class OdemeYapViewController: UIViewController {
         odemeBtn.layer.cornerRadius=15
         odemeBtn.layer.masksToBounds=true
         
+        getAdres()
+        
         
         
         
@@ -49,12 +57,14 @@ class OdemeYapViewController: UIViewController {
     
     
     @IBAction func clickKapida(_ sender: Any) {
+        odemeSekli=true
         kapidaBtn.setImage(UIImage(named: "dolu"), for: .normal)
         TRXBtn.setImage(UIImage(named: "bos"), for: .normal)
     }
     
     
     @IBAction func clickTRX(_ sender: Any) {
+        odemeSekli=false
         TRXBtn.setImage(UIImage(named: "dolu"), for: .normal)
         kapidaBtn.setImage(UIImage(named: "bos"), for: .normal)
     }
@@ -68,6 +78,16 @@ class OdemeYapViewController: UIViewController {
     
     
     @IBAction func odemeKontrolBtn(_ sender: Any) {
+        if odemeSekli == true {
+            self.performSegue(withIdentifier: "toSiparisOnayla", sender: nil)
+            Sepet.sepet.urunSepetList.removeAll()
+        }else{
+            coinKontrol()
+        }
+        
+    }
+    
+    func coinKontrol(){
         let url = URL(string: "https://apilist.tronscan.org/api/transaction?sort=-timestamp&count=true&limit=20&start=0&address=T9zzBDkYdrckB7BVHpHnc18brUBFof4PGy")
         
         WebService().getTrxApi(url: url!) { (trxDataList) in
@@ -81,6 +101,7 @@ class OdemeYapViewController: UIViewController {
                 DispatchQueue.main.async {
                     if ((gonderen.elementsEqual(self.ownerAdress)) && (alici.elementsEqual(self.toAdress)) && (amount == self.urunTutari)) {
                         self.performSegue(withIdentifier: "toSiparisOnayla", sender: nil)
+                        Sepet.sepet.urunSepetList.removeAll()
                     }
                     else{
                         print("islem bool : ",self.islemBool)
@@ -92,7 +113,28 @@ class OdemeYapViewController: UIViewController {
             
         }
         
-        
     }
+    
+    func getAdres(){
+        let docRef=db.collection("Users").document(currentUser)
+        
+        docRef.addSnapshotListener { (snapshot, error) in
+            if error != nil {
+                self.hataMesaji(titleInput: "HATA", messageInput: error?.localizedDescription ?? "Hata aldınız , tekrar deneyiniz.")
+            }else{
+                if snapshot != nil {
+                    self.adresText.text=snapshot?.get("adres") as? String
+                }
+            }
+        }
+    }
+    
+    func hataMesaji(titleInput: String,messageInput: String){
+        let alert = UIAlertController(title: titleInput, message: messageInput, preferredStyle: UIAlertController.Style.alert)
+        let  okButton = UIAlertAction(title: "OK", style: UIAlertAction.Style.default,handler: nil)
+        alert.addAction(okButton)
+        self.present(alert, animated: true, completion: nil)
+    }
+    
     
 }
