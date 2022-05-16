@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import Firebase
+import SDWebImage
 
 class AnasayfaViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource{
     
@@ -16,18 +18,38 @@ class AnasayfaViewController: UIViewController, UICollectionViewDelegate, UIColl
     let kategoriCell = "kategoriCell"
     let urunCell = "urunCell"
     
-    var urunImg = ["hamburger","hamburger","hamburger"]
-    var urunName = ["Hamburger","Pizza","Tavuk"]
+    var urunImg = [String]()
+    var urunName = [String]()
+    var urunFiyat = [String]()
+    var urunKategoriAdi = [String]()
+    
+    let db=Firestore.firestore()
+    let currentUser=Auth.auth().currentUser!.uid
+    
+    var kategoriUrunlerIsim = [String]()
     
     
-    
-   
+    func getKategori(){
+        db.collection("Kategoriler").addSnapshotListener { [self] (snapshot, error) in
+            if error != nil {
+                print("kategori hata")
+            }else{
+                for document in snapshot!.documents{
+                    if let kategoriAd = document.get("kategoriAdi") as? String{
+                        self.kategoriUrunlerIsim.append(kategoriAd)
+                        self.kategoriCollectionView.reloadData()
+                    }
+                }
+            }
+        }
+        
+    }
     
     // Collection için
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
         if collectionView == self.kategoriCollectionView{
-            return kategoriUrunler.count
+            return kategoriUrunlerIsim.count
         }
         else if collectionView == self.urunCollectionView{
             return urunImg.count
@@ -40,37 +62,29 @@ class AnasayfaViewController: UIViewController, UICollectionViewDelegate, UIColl
         if collectionView == self.kategoriCollectionView{
             let kategoriCell = collectionView.dequeueReusableCell(withReuseIdentifier: "kategoriCell", for: indexPath) as! KategoriCollectionViewCell
             
-            kategoriCell.kategoriUrunImage.image = UIImage(named: kategoriUrunler[indexPath.row])
-            //kategoriCell.kategoriUrunImage.layer.cornerRadius = 50.0
+            kategoriCell.kategoriUrunImage.setImage(UIImage(named: "hamburger"), for: .normal)
             kategoriCell.kategoriUrunIsim.text = kategoriUrunlerIsim[indexPath.row]
+            
+            kategoriCell.delegate = self
             return kategoriCell
         }
         else if collectionView == self.urunCollectionView{
             let urunCell = collectionView.dequeueReusableCell(withReuseIdentifier: "urunCell", for: indexPath) as! UrunCollectionViewCell
             
-            urunCell.urunImg.image = UIImage(named: urunImg[indexPath.row])
-            
-            urunCell.urunName.text = urunName[indexPath.row]
-            
-            //urunCell.index = indexPath
-            
-            //urunCell.delegate = self
+            urunCell.urunImg.sd_setImage(with: URL(string: self.urunImg[indexPath.row]))
+            urunCell.urunName.text = self.urunName[indexPath.row]
+            urunCell.urunPrice.text = self.urunFiyat[indexPath.row]
+        
             return urunCell
         }
         return UICollectionViewCell()
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        /*let sepetVc = storyboard?.instantiateViewController(identifier: "sepetimViewController") as? SepetimViewController
         
-        sepetVc?.urunNameTxt = urunName[indexPath.row]
-        sepetVc?.urunImgTxt = urunImg[indexPath.row]
-        self.navigationController?.pushViewController(sepetVc!, animated: true)*/
     }
     
-    //var kategoriUrunler:[String] = ["hamburger","pizza","chicken","drink","meat","patato"]
-    var kategoriUrunler:[String] = ["hamburger","hamburger","hamburger","hamburger","hamburger","hamburger"]
-    var kategoriUrunlerIsim:[String] = ["Hamburger","Pizza","Tavuk","İçecek","Et","Patates"]
+    
     
     
    
@@ -83,9 +97,72 @@ class AnasayfaViewController: UIViewController, UICollectionViewDelegate, UIColl
         urunCollectionView.delegate = self
         urunCollectionView.dataSource = self
         
+        self.kategoriUrunlerIsim.removeAll()
+        self.urunImg.removeAll()
+        self.urunName.removeAll()
+        self.urunFiyat.removeAll()
+        self.getKategori()
+        self.getUrun(kategoriUrunIsim: kategoriUrunlerIsim.first ?? "Hamburger")
+        //self.getUrun2(kategoriUrunIsim: "Tavuk")
+        
+        kategoriCollectionView.reloadData()
+        
        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+                
+        if let kategoriUrunIsim = self.kategoriUrunlerIsim.first{
+            self.getUrun(kategoriUrunIsim: kategoriUrunIsim)
+        }
+        
+        
+                
     }
 }
 
 
+extension AnasayfaViewController:KategoriCollectionProtocol{
+    func getUrun(kategoriUrunIsim: String) {
+        
+        self.urunImg.removeAll()
+        self.urunName.removeAll()
+        self.urunFiyat.removeAll()
+        db.collection("Urunler").addSnapshotListener { (snapshot, error) in
+            if error != nil {
+                print("Hata Urunler")
+            }else{
+                for document in snapshot!.documents{
+                    if let urunKategoriAdi=document.get("kategoriAdi") as? String{
+                        if urunKategoriAdi == kategoriUrunIsim{
+                            if let urunAdi = document.get("urunAdi") as? String{
+                                
+                                self.urunName.append(urunAdi)
+                                
+                            }
+                            
+                            if let urunImageUrl=document.get("imageUrl") as? String{
+                                self.urunImg.append(urunImageUrl)
+                                
+                            }
+                            
+                            if let urunFiyat=document.get("urunFiyat") as? String{
+                                self.urunFiyat.append(urunFiyat)
+                               
+                            }
+                            
+                            self.urunKategoriAdi.append(urunKategoriAdi)
+                            
+                            self.urunCollectionView.reloadData()
+                        }
+                        
+                    }
+                }
+            }
+        }
+    }
+    
+    
+}
 

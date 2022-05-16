@@ -7,10 +7,23 @@
 
 import UIKit
 
+protocol KategoriCollectionProtocol {
+    func getUrun(kategoriUrunIsim:String)
+}
+
 class KategoriCollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet weak var kategoriUrunImage: UIImageView!
+    var delegate : KategoriCollectionProtocol?
+    
+    @IBOutlet weak var kategoriUrunImage: UIButton!
     @IBOutlet weak var kategoriUrunIsim: UILabel!
+    @IBAction func kategoriUrunBtn(_ sender: Any) {
+        if let kategoriUrunIsim = kategoriUrunIsim.text{
+            delegate?.getUrun(kategoriUrunIsim: kategoriUrunIsim)
+            print(kategoriUrunIsim)
+        }
+        
+    }
     
     
 }
