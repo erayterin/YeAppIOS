@@ -3,4 +3,52 @@
    uuid = "A48A2FB2-64CD-4AEE-9193-9D232015EC2E"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.AddressBreakpoint">
+         <BreakpointContent
+            uuid = "0D62B993-DE87-4C0D-AD90-1E448119F2EE"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            symbolName = "*0x101cd5a91">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  usesParentBreakpointCondition = "Yes"
+                  offsetFromSymbolStart = "0">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.AddressBreakpoint">
+         <BreakpointContent
+            uuid = "FF4A2C09-5D6F-473E-9326-062E2A2C963C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            symbolName = "*0x101cd5a7e">
+            <Locations>
+               <Location
+                  uuid = "FF4A2C09-5D6F-473E-9326-062E2A2C963C - c9bace3a8cf82f60"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "reabstraction thunk helper from @escaping @callee_guaranteed (@guaranteed Swift.Optional&lt;__C.FIRQuerySnapshot&gt;, @guaranteed Swift.Optional&lt;Swift.Error&gt;) -&gt; () to @escaping @callee_unowned @convention(block) (@unowned Swift.Optional&lt;__C.FIRQuerySnapshot&gt;, @unowned Swift.Optional&lt;__C.NSError&gt;) -&gt; ()"
+                  moduleName = "YeAppIOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ynssasa/Documents/YeAppIOS/%3Ccompiler-generated%3E"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "14">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
