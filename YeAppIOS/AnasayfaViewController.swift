@@ -89,6 +89,7 @@ class AnasayfaViewController: UIViewController, UICollectionViewDelegate, UIColl
             let urunCell = collectionView.dequeueReusableCell(withReuseIdentifier: "urunCell", for: indexPath) as! UrunCollectionViewCell
             
             urunCell.urunImg.sd_setImage(with: URL(string: self.urunImg[indexPath.row]))
+            //print("Ürün Url : ",urunCell.urunImg.sd_imageURL)
             urunCell.urunName.text = self.urunName[indexPath.row]
             urunCell.urunPrice.text = self.urunFiyat[indexPath.row]
         

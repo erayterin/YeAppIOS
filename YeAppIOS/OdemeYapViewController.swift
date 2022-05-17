@@ -20,6 +20,10 @@ class OdemeYapViewController: UIViewController {
     @IBOutlet weak var TRXBtn: UIButton!
     @IBOutlet weak var cuzdanKoduText: UILabel!
     @IBOutlet weak var copyBtn: UIButton!
+    var odemeTipi = "Kapıda Ödeme"
+    var urunImageList = [String]()
+    
+    
     
     let currentUser=Auth.auth().currentUser!.uid
     let db=Firestore.firestore()
@@ -28,7 +32,6 @@ class OdemeYapViewController: UIViewController {
     
     
     var araToplamText = "0"
-    var teslimatUcretiText = "5"
     var toplamText = "0"
     
     var ownerAdress = "TBA6CypYJizwA9XdC7Ubgc5F1bxrQ7SqPt" //musteri adresi gonderen
@@ -51,13 +54,14 @@ class OdemeYapViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         araToplamTxt.text = araToplamText
-        teslimatUcretiTxt.text = teslimatUcretiText
+        teslimatUcretiTxt.text = Sepet.sepet.teslimatUcreti.description
         toplamTxt.text = toplamText
     }
     
     
     @IBAction func clickKapida(_ sender: Any) {
         odemeSekli=true
+        odemeTipi = "Kapıda Ödeme"
         kapidaBtn.setImage(UIImage(named: "dolu"), for: .normal)
         TRXBtn.setImage(UIImage(named: "bos"), for: .normal)
     }
@@ -65,6 +69,7 @@ class OdemeYapViewController: UIViewController {
     
     @IBAction func clickTRX(_ sender: Any) {
         odemeSekli=false
+        odemeTipi = "Kripto Ödeme"
         TRXBtn.setImage(UIImage(named: "dolu"), for: .normal)
         kapidaBtn.setImage(UIImage(named: "bos"), for: .normal)
     }
@@ -80,6 +85,7 @@ class OdemeYapViewController: UIViewController {
     @IBAction func odemeKontrolBtn(_ sender: Any) {
         if odemeSekli == true {
             self.performSegue(withIdentifier: "toSiparisOnayla", sender: nil)
+            siparisCreate()
             Sepet.sepet.urunSepetList.removeAll()
         }else{
             coinKontrol()
@@ -101,6 +107,7 @@ class OdemeYapViewController: UIViewController {
                 DispatchQueue.main.async {
                     if ((gonderen.elementsEqual(self.ownerAdress)) && (alici.elementsEqual(self.toAdress)) && (amount == self.urunTutari)) {
                         self.performSegue(withIdentifier: "toSiparisOnayla", sender: nil)
+                        self.siparisCreate()
                         Sepet.sepet.urunSepetList.removeAll()
                     }
                     else{
@@ -135,6 +142,78 @@ class OdemeYapViewController: UIViewController {
         alert.addAction(okButton)
         self.present(alert, animated: true, completion: nil)
     }
+    func nowDate()->String{
+        let date = Date()
+        let formatter = DateFormatter()
+        
+        formatter.timeZone = .current
+        formatter.locale = .current
+        formatter.dateFormat = "dd/MM/yyyy"
+        
+        return formatter.string(from: date)
+    }
+    func siparisCreate(){
+        let currentUser = Auth.auth().currentUser!.uid
+        
+        let firestoreSiparis = ["adres" : adresText.text! , "date" : nowDate(), "id" : "" , "odemeTipi" : odemeTipi,"toplam" : Sepet.sepet.sepetHesapla().description]
+        var ref: DocumentReference? = nil
+        ref = Firestore.firestore().collection("Siparisler").document(currentUser).collection("Siparis").document()
+        print(ref!.documentID)
+        self.siparisDetayCreate(id: ref!.documentID)
+        ref!.setData(firestoreSiparis){
+            (error) in
+            if error != nil{
+                self.hataMesaji(titleInput: "HATA", messageInput: error?.localizedDescription ?? "Hata aldınız , tekrar deneyiniz.")
+            }else{
+                
+            }
+        }
+    }
+    func siparisDetayCreate(id : String){
+        let currentUser = Auth.auth().currentUser!.uid
+        
+        
+        var ref: DocumentReference? = nil
+        for sepetUrun in Sepet.sepet.urunSepetList{
+            
+           
+           let firestoreSiparis = ["adet" : sepetUrun.urunCount , "date" : nowDate(), "resim" : "resimurl" , "urunAd" : sepetUrun.urunName,"urunFiyat" : sepetUrun.urunPrice,"userId":currentUser] as [String : Any]
+            
+            ref = Firestore.firestore().collection("SiparisDetay").document(id).collection("Urunler").document()
+            print(ref!.documentID)
+            ref!.setData(firestoreSiparis){
+                (error) in
+                if error != nil{
+                    self.hataMesaji(titleInput: "HATA", messageInput: error?.localizedDescription ?? "Hata aldınız , tekrar deneyiniz.")
+                }else{
+                    
+                }
+            }
+        }
+        
+    }
     
-    
+    func getUrun(name: String) {
+        
+        
+        db.collection("Urunler").addSnapshotListener { (snapshot, error) in
+            if error != nil {
+                print("Hata Urunler")
+            }else{
+                for document in snapshot!.documents{
+                    if let urunAdi=document.get("urunAdi") as? String{
+                        if urunAdi == name{
+                            
+                            if let urunImageUrl=document.get("imageUrl") as? String{
+                                
+                                
+                            }
+                           
+                        }
+                        
+                    }
+                }
+            }
+        }
+    }
 }

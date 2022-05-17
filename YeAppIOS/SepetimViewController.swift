@@ -37,17 +37,17 @@ class SepetimViewController: UIViewController, UICollectionViewDelegate, UIColle
         if segue.identifier == "toOdemeYap"{
             let destinationVC = segue.destination as! OdemeYapViewController
             destinationVC.araToplamText = araToplamTxt.text!
-            destinationVC.teslimatUcretiText = teslimatUcretiTxt.text!
+            //destinationVC.teslimatUcretiText = teslimatUcretiTxt.text!
             destinationVC.toplamText = toplamUcretTxt.text!
         }
     }
     func sepetHesapla(){
         
         
-        araToplamTxt.text = Sepet.sepet.sepetHesapla().description
-        
+        araToplamTxt.text = (Sepet.sepet.sepetHesapla() - Sepet.sepet.teslimatUcreti).description
+        teslimatUcretiTxt.text = Sepet.sepet.teslimatUcreti.description
         if (araToplamTxt.text as! NSString).integerValue != 0 {
-            toplamUcretTxt.text = (5.0 + Sepet.sepet.sepetHesapla()).description
+            toplamUcretTxt.text = (Sepet.sepet.sepetHesapla()).description
         }
         else{
             toplamUcretTxt.text = "0"
@@ -96,7 +96,6 @@ class SepetimViewController: UIViewController, UICollectionViewDelegate, UIColle
             let sepetUrunCell = collectionView.dequeueReusableCell(withReuseIdentifier: "sepetUrunCell", for: indexPath) as! SepetCollectionViewCell
             
             sepetUrunCell.sepetUrunImg.image = Sepet.sepet.urunSepetList[indexPath.row].urunImg
-            
             sepetUrunCell.sepetUrunName.text = Sepet.sepet.urunSepetList[indexPath.row].urunName
            
             sepetUrunCell.sepetUrunCount.text = Sepet.sepet.urunSepetList[indexPath.row].urunCount

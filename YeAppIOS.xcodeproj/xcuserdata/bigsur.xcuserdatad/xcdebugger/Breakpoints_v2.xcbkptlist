@@ -16,8 +16,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "90"
             endingLineNumber = "90"
-            landmarkName = "AnasayfaViewController"
-            landmarkType = "3">
+            landmarkName = "collectionView(_:cellForItemAt:)"
+            landmarkType = "7">
             <Locations>
                <Location
                   uuid = "E2A58D0C-0496-4A39-81E4-3C8C20E9E93A - 1dd108d9e29f67b9"
