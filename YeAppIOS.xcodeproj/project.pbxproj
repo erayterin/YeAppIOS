@@ -14,6 +14,8 @@
 		7245D55E282CB53400DCEA57 /* Sepet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7245D55D282CB53400DCEA57 /* Sepet.swift */; };
 		7245EB04283160FA006A3771 /* SiparisOnaylaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7245EB03283160FA006A3771 /* SiparisOnaylaViewController.swift */; };
 		7245EB0828329DFC006A3771 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 7245EB0728329DFC006A3771 /* SDWebImage */; };
+		7246A014283407A7001E6F52 /* SiparislerimTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7246A013283407A7001E6F52 /* SiparislerimTableViewCell.swift */; };
+		7246A01B28341324001E6F52 /* SiparisDetayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7246A01A28341324001E6F52 /* SiparisDetayTableViewCell.swift */; };
 		72508B6128313EE00082ECEF /* SiparisOnayHataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72508B6028313EE00082ECEF /* SiparisOnayHataViewController.swift */; };
 		727A439D283103C100DD162B /* TrxApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727A439C283103C100DD162B /* TrxApi.swift */; };
 		727A43A0283104F100DD162B /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727A439F283104F100DD162B /* WebService.swift */; };
@@ -50,6 +52,8 @@
 		7245D55A282C09DF00DCEA57 /* Urun.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Urun.swift; sourceTree = "<group>"; };
 		7245D55D282CB53400DCEA57 /* Sepet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sepet.swift; sourceTree = "<group>"; };
 		7245EB03283160FA006A3771 /* SiparisOnaylaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiparisOnaylaViewController.swift; sourceTree = "<group>"; };
+		7246A013283407A7001E6F52 /* SiparislerimTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiparislerimTableViewCell.swift; sourceTree = "<group>"; };
+		7246A01A28341324001E6F52 /* SiparisDetayTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiparisDetayTableViewCell.swift; sourceTree = "<group>"; };
 		72508B6028313EE00082ECEF /* SiparisOnayHataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiparisOnayHataViewController.swift; sourceTree = "<group>"; };
 		727A439C283103C100DD162B /* TrxApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrxApi.swift; sourceTree = "<group>"; };
 		727A439F283104F100DD162B /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
@@ -142,6 +146,8 @@
 				727A439F283104F100DD162B /* WebService.swift */,
 				72508B6028313EE00082ECEF /* SiparisOnayHataViewController.swift */,
 				7245EB03283160FA006A3771 /* SiparisOnaylaViewController.swift */,
+				7246A013283407A7001E6F52 /* SiparislerimTableViewCell.swift */,
+				7246A01A28341324001E6F52 /* SiparisDetayTableViewCell.swift */,
 			);
 			path = YeAppIOS;
 			sourceTree = "<group>";
@@ -242,6 +248,7 @@
 				72A2925828281273001FD25F /* AppDelegate.swift in Sources */,
 				7245D54A282A335000DCEA57 /* AnasayfaViewController.swift in Sources */,
 				7245D547282A32C300DCEA57 /* KategoriCollectionViewCell.swift in Sources */,
+				7246A01B28341324001E6F52 /* SiparisDetayTableViewCell.swift in Sources */,
 				727A43A0283104F100DD162B /* WebService.swift in Sources */,
 				DCD36AAA2829750600A51496 /* ProfileViewController.swift in Sources */,
 				DC491507282ACA3A00D87897 /* SepetimViewController.swift in Sources */,
@@ -251,6 +258,7 @@
 				7245D55E282CB53400DCEA57 /* Sepet.swift in Sources */,
 				DCD36AA02829657000A51496 /* UrunGuncelleViewController.swift in Sources */,
 				72A2925A28281273001FD25F /* SceneDelegate.swift in Sources */,
+				7246A014283407A7001E6F52 /* SiparislerimTableViewCell.swift in Sources */,
 				DCD36AA62829714300A51496 /* OdemeYapViewController.swift in Sources */,
 				DCD36AA32829676300A51496 /* UrunSilViewController.swift in Sources */,
 			);
