@@ -162,7 +162,7 @@ class OdemeYapViewController: UIViewController {
         ref = Firestore.firestore().collection("Siparisler").document(currentUser).collection("Siparis").document()
         print(ref!.documentID)
         self.siparisDetayCreate(id: ref!.documentID)
-        self.adminSiparisDetayCreate(id: ref!.documentID , toplam: Sepet.sepet.sepetHesapla().description)
+        self.adminSiparisDetayCreate(id: ref!.documentID)
         ref!.setData(firestoreSiparis){
             (error) in
             if error != nil{
@@ -173,9 +173,9 @@ class OdemeYapViewController: UIViewController {
         }
     }
     
-    func adminSiparisDetayCreate(id : String , toplam : String){
+    func adminSiparisDetayCreate(id : String){
         let currentUser = Auth.auth().currentUser!.uid
-        let firestoreSiparis = ["userId" : currentUser , "toplam" : toplam , "adres" : adresText.text!]
+        let firestoreSiparis = ["userId" : currentUser , "toplam" : Sepet.sepet.sepetHesapla().description , "adres" : adresText.text!,"date" : self.nowDate()]
         var ref: DocumentReference? = nil
         ref = Firestore.firestore().collection("AdminSiparisDetay").document(id)
         ref!.setData(firestoreSiparis){
@@ -229,28 +229,4 @@ class OdemeYapViewController: UIViewController {
         }
     }
     
-    
-    func siparisDetayCreate2(id : String){
-        let currentUser = Auth.auth().currentUser!.uid
-        
-        
-        var ref: DocumentReference? = nil
-        for sepetUrun in Sepet.sepet.urunSepetList{
-            
-            let firestoreSiparis = ["adet" : sepetUrun.urunCount , "date" : nowDate(), "resim" : "" , "urunAd" : sepetUrun.urunName,"urunFiyat" : sepetUrun.urunPrice,"userId":currentUser] as [String : Any]
-            
-            ref = Firestore.firestore().collection("SiparisDetay").document(id).collection("Urunler").document()
-            print(ref!.documentID)
-            ref!.setData(firestoreSiparis){
-                (error) in
-                if error != nil{
-                    self.hataMesaji(titleInput: "HATA", messageInput: error?.localizedDescription ?? "Hata aldınız , tekrar deneyiniz.")
-                }else{
-                    
-                }
-            }
-        }
-        
-    }
-
 }

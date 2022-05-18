@@ -34,6 +34,8 @@ class ProfileViewController: UIViewController {
             urunAyarlariBtn.isHidden=false
         }
         
+        sifreText.isSecureTextEntry = true
+        sifreTekrarText.isSecureTextEntry=true
         
         getProfilBilgi()
         

@@ -20,6 +20,9 @@ class UyeOlViewController: UIViewController {
         
         uyeOlBtn.layer.cornerRadius=25
         uyeOlBtn.layer.masksToBounds=true
+        
+        sifreText.isSecureTextEntry=true
+        sifreTekrarText.isSecureTextEntry=true
     }
     
     @IBAction func uyeOl(_ sender: Any) {
