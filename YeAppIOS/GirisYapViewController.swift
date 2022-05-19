@@ -19,6 +19,7 @@ class GirisYapViewController: UIViewController {
         girisYapBtn.layer.cornerRadius=25
         girisYapBtn.layer.masksToBounds=true
         
+        sifreText.isSecureTextEntry=true
         
     }
 

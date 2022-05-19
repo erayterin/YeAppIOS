@@ -97,7 +97,7 @@
             <objects>
                 <viewController id="FdP-NI-f8q" customClass="GirisYapViewController" customModule="YeAppIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DIp-N5-2jP">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Merhaba" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z4t-8d-SqK">
@@ -632,6 +632,7 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profil" image="person" catalog="system" id="AAN-GX-adb"/>
+                    <navigationItem key="navigationItem" id="HZ5-vW-1N9"/>
                     <connections>
                         <outlet property="adSoyadText" destination="0Fn-Q3-81h" id="TJL-Va-Fj8"/>
                         <outlet property="adresText" destination="nKv-MA-YSB" id="OHQ-rT-leL"/>
@@ -2247,12 +2248,6 @@
                                                         <constraint firstAttribute="width" constant="91" id="yvB-2f-we5"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="19 ₺" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TP9-EY-yhd">
-                                                    <rect key="frame" x="119" y="74" width="235" height="27"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hamburger" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tDE-nv-nKj">
                                                     <rect key="frame" x="119" y="18" width="235" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
@@ -2273,6 +2268,12 @@
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="115" id="iDd-we-pqW"/>
                                                     </constraints>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="19 ₺" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TP9-EY-yhd">
+                                                    <rect key="frame" x="119" y="83" width="235" height="27"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -2310,6 +2311,9 @@
                                 <state key="normal" title="Tamamlandı">
                                     <color key="titleColor" name="orange"/>
                                 </state>
+                                <connections>
+                                    <action selector="deleteSiparis:" destination="qWb-eV-v3Y" eventType="touchUpInside" id="NZo-dJ-maO"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="15a-GE-rbB">
                                 <rect key="frame" x="262" y="733" width="53" height="31"/>
@@ -2385,6 +2389,7 @@
                         <outlet property="siparisDetayTeslimatUcreti" destination="usw-XZ-QP4" id="DQd-CH-t6e"/>
                         <outlet property="siparisDetayToplam" destination="15a-GE-rbB" id="INq-N5-rdf"/>
                         <outlet property="tamamlandiBtn" destination="1pQ-Bp-3X5" id="h6P-35-S2y"/>
+                        <segue destination="Uej-is-BEy" kind="show" identifier="toSiparisler" id="Qr4-VW-EtW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yEI-Yi-F99" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -2393,9 +2398,9 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="JPl-4k-qRc"/>
-        <segue reference="RLf-3f-Cp1"/>
-        <segue reference="nh3-Uq-MGQ"/>
+        <segue reference="Qr4-VW-EtW"/>
+        <segue reference="iCh-xJ-lYT"/>
+        <segue reference="AJ5-Fj-dSd"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="arka_plan" width="375" height="306"/>

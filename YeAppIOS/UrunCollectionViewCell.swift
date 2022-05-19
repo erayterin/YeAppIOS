@@ -46,13 +46,7 @@ class UrunCollectionViewCell: UICollectionViewCell {
                     urunCount: urunCount.text!,
                     urunPrice: urunPrice.text!))
         }
-        
-        //print(urunPrice.text)
-        
-        /*for urunSepet in Sepet.sepet.urunSepetList {
-            print(urunSepet.urunName+" ",urunSepet.urunImg)
-        }*/
-        //print("Sepet Count : ", Sepet.sepet.urunSepetList[])
+
     }
     
     func urunKontrol()->Bool{
