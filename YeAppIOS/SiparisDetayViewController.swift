@@ -9,11 +9,12 @@ import UIKit
 import Firebase
 import SDWebImage
 
-class SiparisDetayViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class SiparisDetayViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
     
 
-    @IBOutlet weak var siparisDetayTableView: UITableView!
+    
+    @IBOutlet weak var siparisDetayCollectionView: UICollectionView!
     @IBOutlet weak var siparisDetayId: UILabel!
     @IBOutlet weak var siparisDetayAdres: UITextView!
     @IBOutlet weak var siparisDetayAraToplam: UILabel!
@@ -35,15 +36,15 @@ class SiparisDetayViewController: UIViewController, UITableViewDelegate, UITable
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        siparisDetayTableView.dataSource = self
-        siparisDetayTableView.delegate = self
+        siparisDetayCollectionView.dataSource = self
+        siparisDetayCollectionView.delegate = self
         
         siparisDetayId.text = secilenId
-        self.siparisDetayToplam.text = toplam
-        let araToplam = Double(toplam)! - (5.99)
-        self.siparisDetayAraToplam.text = String(araToplam)
+        self.siparisDetayToplam.text = toplam+" ₺"
+        let araToplam = Int(toplam)! - (5)
+        self.siparisDetayAraToplam.text = String(araToplam)+" ₺"
 
-        siparisDetayTeslimatUcreti.text = "5.99"
+        siparisDetayTeslimatUcreti.text = "5 ₺"
 
         getSiparisDetay()
         
@@ -58,22 +59,25 @@ class SiparisDetayViewController: UIViewController, UITableViewDelegate, UITable
         }
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return siparisDetayUrunImg.count
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return self.siparisDetayUrunImg.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "siparisDetayCell", for: indexPath) as! SiparisDetayTableViewCell
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let siparisDetayCell = collectionView.dequeueReusableCell(withReuseIdentifier: "siparisDetayCell", for: indexPath) as! SiparisDetayCollectionViewCell
         
-        cell.siparisDetayUrunAdi.text = self.siparisDetayUrunAdi[indexPath.row]
-        //cell.siparisDetayUrunImg.sd_setImage(with: URL(string: self.siparisDetayUrunImg[indexPath.row]))
+        siparisDetayCell.siparisDetayUrunImg.sd_setImage(with: URL(string:siparisDetayUrunImg[indexPath.row]))
         
-        cell.siparisDetayUrunImg.image = UIImage(named: "hamburger")
-        cell.siparisDetayUrunAdet.text = self.siparisDetayUrunAdet[indexPath.row]
-        cell.siparisDetayUrunFiyat.text = self.siparisDetayUrunFiyat[indexPath.row]
-
+        //siparisDetayCell.siparisDetayUrunImg.image = UIImage(named: "hamburger")
         
-        return cell
+        siparisDetayCell.siparisDetayUrunName.text = self.siparisDetayUrunAdi[indexPath.row]
+        
+        siparisDetayCell.siparisDetayUrunAdet.text = self.siparisDetayUrunAdet[indexPath.row]
+        
+        siparisDetayCell.siparisDetayUrunFiyat.text = self.siparisDetayUrunFiyat[indexPath.row]+" ₺"
+        
+        
+        return siparisDetayCell
     }
     
     func getSiparisDetay(){
@@ -92,11 +96,12 @@ class SiparisDetayViewController: UIViewController, UITableViewDelegate, UITable
                     
                     if let resim = document.get("resim") as? String {
                         self.siparisDetayUrunImg.append(resim)
-                        print(resim)
+                        print("Gelen Resim : ",resim)
+                        print("Listedeki : ",self.siparisDetayUrunImg.first)
                     }
                    
                     
-                    self.siparisDetayTableView.reloadData()
+                    self.siparisDetayCollectionView.reloadData()
                     
                     let ad = document.get("urunAd") as? String
                     self.siparisDetayUrunAdi.append(ad!)
@@ -120,7 +125,7 @@ class SiparisDetayViewController: UIViewController, UITableViewDelegate, UITable
     
     @IBAction func deleteSiparis(_ sender: Any) {
         db.collection("AdminSiparisDetay").document(secilenId).delete()
-        performSegue(withIdentifier: "toSiparisler", sender: nil)
+        performSegue(withIdentifier: "toSiparisGit", sender: nil)
     }
     
     
@@ -133,6 +138,7 @@ class SiparisDetayViewController: UIViewController, UITableViewDelegate, UITable
                                      
                 if let adres = snapshot?.get("adres") as? String{
                     self.siparisDetayAdres.text = adres
+                    self.siparisDetayAdres.isEditable=false
                 }
                     
 

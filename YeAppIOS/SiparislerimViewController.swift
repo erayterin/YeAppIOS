@@ -13,6 +13,10 @@ class SiparislerimViewController: UIViewController, UITableViewDelegate, UITable
 
     @IBOutlet weak var siparislerTableView: UITableView!
     
+    @IBAction func siparisBackButton(_ sender: Any) {
+        self.tabBarController?.selectedIndex = 2
+    }
+    
     var siparisTarih = [String]()
     var siparisId = [String]()
     var siparisToplamFiyat = [String]()
@@ -48,7 +52,7 @@ class SiparislerimViewController: UIViewController, UITableViewDelegate, UITable
         cell.siparisId.text = self.siparisId[indexPath.row]
         cell.siparisUrunTarih.text = self.siparisTarih[indexPath.row]
         cell.siparisUrunImg.image = UIImage(named: "hamburger")
-        cell.siparisToplamFiyat.text = self.siparisToplamFiyat[indexPath.row]
+        cell.siparisToplamFiyat.text = self.siparisToplamFiyat[indexPath.row]+" ₺"
         cell.siparisDetaylar.text = "Detaylar →"
         return cell
     }

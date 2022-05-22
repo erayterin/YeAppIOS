@@ -44,9 +44,8 @@ class OdemeYapViewController: UIViewController {
         super.viewDidLoad()
         odemeBtn.layer.cornerRadius=15
         odemeBtn.layer.masksToBounds=true
-        
         getAdres()
-        
+        self.adresText.isEditable=false
         
         
         

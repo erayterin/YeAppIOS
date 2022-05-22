@@ -43,14 +43,19 @@ class SepetimViewController: UIViewController, UICollectionViewDelegate, UIColle
     }
     func sepetHesapla(){
         
-        
-        araToplamTxt.text = (Sepet.sepet.sepetHesapla() - Sepet.sepet.teslimatUcreti).description
-        teslimatUcretiTxt.text = Sepet.sepet.teslimatUcreti.description
-        if (araToplamTxt.text as! NSString).integerValue != 0 {
-            toplamUcretTxt.text = (Sepet.sepet.sepetHesapla()).description
+        if(Sepet.sepet.sepetHesapla()>0){
+            araToplamTxt.text = (Sepet.sepet.sepetHesapla() - Sepet.sepet.teslimatUcreti).description+" ₺"
         }
         else{
-            toplamUcretTxt.text = "0"
+            araToplamTxt.text = "0 ₺"
+        }
+        
+        teslimatUcretiTxt.text = Sepet.sepet.teslimatUcreti.description+" ₺"
+        if (araToplamTxt.text as! NSString).integerValue != 0 {
+            toplamUcretTxt.text = (Sepet.sepet.sepetHesapla()).description+" ₺"
+        }
+        else{
+            toplamUcretTxt.text = "0 ₺"
         }
         
         
@@ -117,13 +122,15 @@ class SepetimViewController: UIViewController, UICollectionViewDelegate, UIColle
 
 extension SepetimViewController:SepetCollectionProtocol{
     func sepetUrunArttir() {
-        sepetHesapla()
+       sepetHesapla()
+        
     }
     func sepetUrunAzalt() {
         sepetHesapla()
     }
     func sepetUrunSil(index: Int) {
         Sepet.sepet.urunSepetList.remove(at: index)
+        sepetHesapla()
         self.loadCollectionData()
     }
     

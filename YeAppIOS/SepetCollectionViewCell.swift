@@ -47,7 +47,7 @@ class SepetCollectionViewCell: UICollectionViewCell {
     // Button Action
     @IBAction func sepetUrunAzalt(_ sender: Any) {
         sepetUrunSayisi = (sepetUrunCount.text! as NSString).integerValue
-        if sepetUrunSayisi != 0
+        if sepetUrunSayisi > 1
         {
             
             sepetUrunSayisi = sepetUrunSayisi-1

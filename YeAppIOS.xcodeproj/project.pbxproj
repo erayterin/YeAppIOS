@@ -15,7 +15,6 @@
 		7245EB04283160FA006A3771 /* SiparisOnaylaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7245EB03283160FA006A3771 /* SiparisOnaylaViewController.swift */; };
 		7245EB0828329DFC006A3771 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 7245EB0728329DFC006A3771 /* SDWebImage */; };
 		7246A014283407A7001E6F52 /* SiparislerimTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7246A013283407A7001E6F52 /* SiparislerimTableViewCell.swift */; };
-		7246A01B28341324001E6F52 /* SiparisDetayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7246A01A28341324001E6F52 /* SiparisDetayTableViewCell.swift */; };
 		72508B6128313EE00082ECEF /* SiparisOnayHataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72508B6028313EE00082ECEF /* SiparisOnayHataViewController.swift */; };
 		727A439D283103C100DD162B /* TrxApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727A439C283103C100DD162B /* TrxApi.swift */; };
 		727A43A0283104F100DD162B /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727A439F283104F100DD162B /* WebService.swift */; };
@@ -24,6 +23,7 @@
 		72A2925F28281273001FD25F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72A2925D28281273001FD25F /* Main.storyboard */; };
 		72A2926128281275001FD25F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72A2926028281275001FD25F /* Assets.xcassets */; };
 		72A2926428281275001FD25F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72A2926228281275001FD25F /* LaunchScreen.storyboard */; };
+		72CA2750283A2A9900ED2BCE /* SiparisDetayCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CA274F283A2A9900ED2BCE /* SiparisDetayCollectionViewCell.swift */; };
 		72D3CE19282CB75D00B74091 /* SepetCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D3CE18282CB75D00B74091 /* SepetCollectionViewCell.swift */; };
 		DC3F8AD3282E8CBD0029BB45 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DC3F8AD2282E8CBD0029BB45 /* GoogleService-Info.plist */; };
 		DC3F8AD7282E924F0029BB45 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = DC3F8AD6282E924F0029BB45 /* FirebaseStorage */; };
@@ -53,7 +53,6 @@
 		7245D55D282CB53400DCEA57 /* Sepet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sepet.swift; sourceTree = "<group>"; };
 		7245EB03283160FA006A3771 /* SiparisOnaylaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiparisOnaylaViewController.swift; sourceTree = "<group>"; };
 		7246A013283407A7001E6F52 /* SiparislerimTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiparislerimTableViewCell.swift; sourceTree = "<group>"; };
-		7246A01A28341324001E6F52 /* SiparisDetayTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiparisDetayTableViewCell.swift; sourceTree = "<group>"; };
 		72508B6028313EE00082ECEF /* SiparisOnayHataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiparisOnayHataViewController.swift; sourceTree = "<group>"; };
 		727A439C283103C100DD162B /* TrxApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrxApi.swift; sourceTree = "<group>"; };
 		727A439F283104F100DD162B /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
@@ -64,6 +63,7 @@
 		72A2926028281275001FD25F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		72A2926328281275001FD25F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		72A2926528281275001FD25F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		72CA274F283A2A9900ED2BCE /* SiparisDetayCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiparisDetayCollectionViewCell.swift; sourceTree = "<group>"; };
 		72D3CE18282CB75D00B74091 /* SepetCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SepetCollectionViewCell.swift; sourceTree = "<group>"; };
 		DC3F8AD2282E8CBD0029BB45 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DC491506282ACA3A00D87897 /* SepetimViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SepetimViewController.swift; sourceTree = "<group>"; };
@@ -147,7 +147,7 @@
 				72508B6028313EE00082ECEF /* SiparisOnayHataViewController.swift */,
 				7245EB03283160FA006A3771 /* SiparisOnaylaViewController.swift */,
 				7246A013283407A7001E6F52 /* SiparislerimTableViewCell.swift */,
-				7246A01A28341324001E6F52 /* SiparisDetayTableViewCell.swift */,
+				72CA274F283A2A9900ED2BCE /* SiparisDetayCollectionViewCell.swift */,
 			);
 			path = YeAppIOS;
 			sourceTree = "<group>";
@@ -248,12 +248,12 @@
 				72A2925828281273001FD25F /* AppDelegate.swift in Sources */,
 				7245D54A282A335000DCEA57 /* AnasayfaViewController.swift in Sources */,
 				7245D547282A32C300DCEA57 /* KategoriCollectionViewCell.swift in Sources */,
-				7246A01B28341324001E6F52 /* SiparisDetayTableViewCell.swift in Sources */,
 				727A43A0283104F100DD162B /* WebService.swift in Sources */,
 				DCD36AAA2829750600A51496 /* ProfileViewController.swift in Sources */,
 				DC491507282ACA3A00D87897 /* SepetimViewController.swift in Sources */,
 				727A439D283103C100DD162B /* TrxApi.swift in Sources */,
 				DC875621282940AF005DDF47 /* GirisYapViewController.swift in Sources */,
+				72CA2750283A2A9900ED2BCE /* SiparisDetayCollectionViewCell.swift in Sources */,
 				7245D556282AB7FF00DCEA57 /* UrunCollectionViewCell.swift in Sources */,
 				7245D55E282CB53400DCEA57 /* Sepet.swift in Sources */,
 				DCD36AA02829657000A51496 /* UrunGuncelleViewController.swift in Sources */,

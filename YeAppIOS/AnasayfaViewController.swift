@@ -108,6 +108,8 @@ class AnasayfaViewController: UIViewController, UICollectionViewDelegate, UIColl
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        
         kategoriCollectionView.delegate = self
         kategoriCollectionView.dataSource = self
         
