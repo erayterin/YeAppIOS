@@ -67,9 +67,7 @@ class SiparisDetayViewController: UIViewController, UICollectionViewDelegate, UI
         let siparisDetayCell = collectionView.dequeueReusableCell(withReuseIdentifier: "siparisDetayCell", for: indexPath) as! SiparisDetayCollectionViewCell
         
         siparisDetayCell.siparisDetayUrunImg.sd_setImage(with: URL(string:siparisDetayUrunImg[indexPath.row]))
-        
-        //siparisDetayCell.siparisDetayUrunImg.image = UIImage(named: "hamburger")
-        
+                
         siparisDetayCell.siparisDetayUrunName.text = self.siparisDetayUrunAdi[indexPath.row]
         
         siparisDetayCell.siparisDetayUrunAdet.text = self.siparisDetayUrunAdet[indexPath.row]

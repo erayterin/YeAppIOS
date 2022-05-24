@@ -12,17 +12,31 @@ class GirisYapViewController: UIViewController {
 
     @IBOutlet weak var girisYapBtn: UIButton!
     @IBOutlet weak var emailText: UITextField!
+    @IBOutlet weak var secureBtn: UIButton!
     @IBOutlet weak var sifreText: UITextField!
+    var secure = true
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         girisYapBtn.layer.cornerRadius=25
         girisYapBtn.layer.masksToBounds=true
         
-        sifreText.isSecureTextEntry=true
+        sifreText.isSecureTextEntry=secure
         
     }
-
+    @IBAction func passwordSecure(_ sender: Any) {
+        if(secure == true){
+            secure = false
+            secureBtn.setImage(UIImage (systemName : "eye"), for: .normal)
+        }else{
+            secure = true
+            secureBtn.setImage(UIImage (systemName: "eye.slash"), for: .normal)
+        }
+        
+        sifreText.isSecureTextEntry = secure
+    }
+    
     @IBAction func girisYap(_ sender: Any) {
        
         
