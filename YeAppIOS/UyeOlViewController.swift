@@ -12,7 +12,11 @@ class UyeOlViewController: UIViewController {
     @IBOutlet weak var uyeOlBtn: UIButton!
     @IBOutlet weak var emailTxt: UITextField!
     @IBOutlet weak var sifreText: UITextField!
+    @IBOutlet weak var sifreSecure: UIButton!
+    @IBOutlet weak var sifreTekrarSecure: UIButton!
     @IBOutlet weak var sifreTekrarText: UITextField!
+    var secure=true
+    var secureTekrar=true
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,10 +25,32 @@ class UyeOlViewController: UIViewController {
         uyeOlBtn.layer.cornerRadius=25
         uyeOlBtn.layer.masksToBounds=true
         
-        sifreText.isSecureTextEntry=true
-        sifreTekrarText.isSecureTextEntry=true
+        sifreText.isSecureTextEntry=secure
+        sifreTekrarText.isSecureTextEntry=secureTekrar
     }
     
+    @IBAction func passwordSecure(_ sender: Any) {
+        if(secure == true){
+            secure = false
+            sifreSecure.setImage(UIImage (systemName : "eye"), for: .normal)
+        }else{
+            secure = true
+            sifreSecure.setImage(UIImage (systemName: "eye.slash"), for: .normal)
+        }
+        
+        sifreText.isSecureTextEntry = secure
+    }
+    @IBAction func passwordTekrarSecure(_ sender: Any) {
+        if(secureTekrar == true){
+            secureTekrar = false
+            sifreTekrarSecure.setImage(UIImage (systemName : "eye"), for: .normal)
+        }else{
+            secureTekrar = true
+            sifreTekrarSecure.setImage(UIImage (systemName: "eye.slash"), for: .normal)
+        }
+        
+        sifreTekrarText.isSecureTextEntry = secureTekrar
+    }
     @IBAction func uyeOl(_ sender: Any) {
         if emailTxt.text != "" && sifreText.text != "" && sifreTekrarText.text != ""{
             if sifreText.text!.elementsEqual(sifreTekrarText.text!){

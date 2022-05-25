@@ -17,11 +17,15 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var cuzdanAdresText: UITextField!
     @IBOutlet weak var mailText: UITextField!
     @IBOutlet weak var sifreText: UITextField!
+    @IBOutlet weak var sifreSecure: UIButton!
+    @IBOutlet weak var sifreTekrarSecure: UIButton!
     @IBOutlet weak var sifreTekrarText: UITextField!
     @IBOutlet weak var merhabaText: UILabel!
     @IBOutlet weak var urunAyarlariBtn: UIButton!
     let currentUser=Auth.auth().currentUser!.uid
     let db=Firestore.firestore()
+    var secure=true
+    var secureTekrar=true
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -34,13 +38,35 @@ class ProfileViewController: UIViewController {
             urunAyarlariBtn.isHidden=false
         }
         
-        sifreText.isSecureTextEntry = true
-        sifreTekrarText.isSecureTextEntry=true
+        sifreText.isSecureTextEntry = secure
+        sifreTekrarText.isSecureTextEntry=secureTekrar
         
         getProfilBilgi()
         
         
         
+    }
+    @IBAction func passwordSecure(_ sender: Any) {
+        if(secure == true){
+            secure = false
+            sifreSecure.setImage(UIImage (systemName : "eye"), for: .normal)
+        }else{
+            secure = true
+            sifreSecure.setImage(UIImage (systemName: "eye.slash"), for: .normal)
+        }
+        
+        sifreText.isSecureTextEntry = secure
+    }
+    @IBAction func passwordTekrarSecure(_ sender: Any) {
+        if(secureTekrar == true){
+            secureTekrar = false
+            sifreTekrarSecure.setImage(UIImage (systemName : "eye"), for: .normal)
+        }else{
+            secureTekrar = true
+            sifreTekrarSecure.setImage(UIImage (systemName: "eye.slash"), for: .normal)
+        }
+        
+        sifreTekrarText.isSecureTextEntry = secureTekrar
     }
     
     @IBAction func cikisYap(_ sender: Any) {
