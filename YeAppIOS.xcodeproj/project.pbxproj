@@ -97,6 +97,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7247DA8D284795D700D13F7C /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				72508B6028313EE00082ECEF /* SiparisOnayHataViewController.swift */,
+				DC875620282940AF005DDF47 /* GirisYapViewController.swift */,
+				DC875623282941BD005DDF47 /* UyeOlViewController.swift */,
+				DCD36A872829523E00A51496 /* ViewController.swift */,
+				DCD36A91282958E100A51496 /* UrunAyarlariViewController.swift */,
+				DCD36A9428295D3700A51496 /* KategoriEkleViewController.swift */,
+				DCD36A9C282962A800A51496 /* UrunEkleViewController.swift */,
+				DCD36A9F2829657000A51496 /* UrunGuncelleViewController.swift */,
+				DCD36AA22829676300A51496 /* UrunSilViewController.swift */,
+				DCD36AA52829714300A51496 /* OdemeYapViewController.swift */,
+				DCD36AA92829750600A51496 /* ProfileViewController.swift */,
+				7245D549282A335000DCEA57 /* AnasayfaViewController.swift */,
+				DC491506282ACA3A00D87897 /* SepetimViewController.swift */,
+				DCC6823D282AE748004A9719 /* SiparislerimViewController.swift */,
+				DCC68240282AEC15004A9719 /* SiparisDetayViewController.swift */,
+				7245EB03283160FA006A3771 /* SiparisOnaylaViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		7247DA8E2847964700D13F7C /* ViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				7245D546282A32C300DCEA57 /* KategoriCollectionViewCell.swift */,
+				7245D555282AB7FF00DCEA57 /* UrunCollectionViewCell.swift */,
+				72D3CE18282CB75D00B74091 /* SepetCollectionViewCell.swift */,
+				7246A013283407A7001E6F52 /* SiparislerimTableViewCell.swift */,
+				72CA274F283A2A9900ED2BCE /* SiparisDetayCollectionViewCell.swift */,
+			);
+			path = ViewCell;
+			sourceTree = "<group>";
+		};
 		72A2924B28281273001FD25F = {
 			isa = PBXGroup;
 			children = (
@@ -116,24 +151,9 @@
 		72A2925628281273001FD25F /* YeAppIOS */ = {
 			isa = PBXGroup;
 			children = (
+				7247DA8E2847964700D13F7C /* ViewCell */,
+				7247DA8D284795D700D13F7C /* ViewController */,
 				72A2925728281273001FD25F /* AppDelegate.swift */,
-				7245D546282A32C300DCEA57 /* KategoriCollectionViewCell.swift */,
-				DC875620282940AF005DDF47 /* GirisYapViewController.swift */,
-				DC875623282941BD005DDF47 /* UyeOlViewController.swift */,
-				DCD36A872829523E00A51496 /* ViewController.swift */,
-				DCD36A91282958E100A51496 /* UrunAyarlariViewController.swift */,
-				DCD36A9428295D3700A51496 /* KategoriEkleViewController.swift */,
-				DCD36A9C282962A800A51496 /* UrunEkleViewController.swift */,
-				DCD36A9F2829657000A51496 /* UrunGuncelleViewController.swift */,
-				DCD36AA22829676300A51496 /* UrunSilViewController.swift */,
-				DCD36AA52829714300A51496 /* OdemeYapViewController.swift */,
-				DCD36AA92829750600A51496 /* ProfileViewController.swift */,
-				7245D549282A335000DCEA57 /* AnasayfaViewController.swift */,
-				DC491506282ACA3A00D87897 /* SepetimViewController.swift */,
-				DCC6823D282AE748004A9719 /* SiparislerimViewController.swift */,
-				DCC68240282AEC15004A9719 /* SiparisDetayViewController.swift */,
-				7245D555282AB7FF00DCEA57 /* UrunCollectionViewCell.swift */,
-				72D3CE18282CB75D00B74091 /* SepetCollectionViewCell.swift */,
 				72A2925928281273001FD25F /* SceneDelegate.swift */,
 				72A2925D28281273001FD25F /* Main.storyboard */,
 				72A2926028281275001FD25F /* Assets.xcassets */,
@@ -144,10 +164,6 @@
 				7245D55D282CB53400DCEA57 /* Sepet.swift */,
 				727A439C283103C100DD162B /* TrxApi.swift */,
 				727A439F283104F100DD162B /* WebService.swift */,
-				72508B6028313EE00082ECEF /* SiparisOnayHataViewController.swift */,
-				7245EB03283160FA006A3771 /* SiparisOnaylaViewController.swift */,
-				7246A013283407A7001E6F52 /* SiparislerimTableViewCell.swift */,
-				72CA274F283A2A9900ED2BCE /* SiparisDetayCollectionViewCell.swift */,
 			);
 			path = YeAppIOS;
 			sourceTree = "<group>";
