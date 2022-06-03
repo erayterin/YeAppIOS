@@ -84,35 +84,23 @@ class SiparisDetayViewController: UIViewController, UICollectionViewDelegate, UI
         siparisDetayUrunAdet.removeAll()
         siparisDetayUrunAdi.removeAll()
         siparisDetayUrunImg.removeAll()
-        
         db.collection("SiparisDetay").document(secilenId).collection("Urunler").addSnapshotListener { (snapshot, error) in
             if error != nil {
                 print("Hata Urunler")
             }else{
                 for document in snapshot!.documents{
-                    
-                    
-                    if let resim = document.get("resim") as? String {
+                 if let resim = document.get("resim") as? String {
                         self.siparisDetayUrunImg.append(resim)
                         print("Gelen Resim : ",resim)
                         print("Listedeki : ",self.siparisDetayUrunImg.first)
                     }
-                   
-                    
                     self.siparisDetayCollectionView.reloadData()
-                    
                     let ad = document.get("urunAd") as? String
                     self.siparisDetayUrunAdi.append(ad!)
-                
                     let adet = document.get("adet") as? String
                     self.siparisDetayUrunAdet.append(adet!)
-                                
-                    
                     let fiyat = document.get("urunFiyat") as? String
                     self.siparisDetayUrunFiyat.append(fiyat!)
-                                
-                    
-                        
                 }
             
             }

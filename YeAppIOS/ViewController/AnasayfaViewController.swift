@@ -131,11 +131,17 @@ class AnasayfaViewController: UIViewController, UICollectionViewDelegate, UIColl
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-                
-        if let kategoriUrunIsim = self.kategoriUrunlerIsim.first{
-            self.getUrun(kategoriUrunIsim: kategoriUrunIsim)
-        }
         
+        if secili == 0{
+            if let kategoriUrunIsim = self.kategoriUrunlerIsim.first{
+                self.getUrun(kategoriUrunIsim: kategoriUrunIsim)
+            }
+        }
+        else{
+            
+            self.getUrun(kategoriUrunIsim: self.kategoriUrunlerIsim[secili])
+            
+        }
         
                 
     }
@@ -161,26 +167,17 @@ extension AnasayfaViewController:KategoriCollectionProtocol{
                     if let urunKategoriAdi=document.get("kategoriAdi") as? String{
                         if urunKategoriAdi == kategoriUrunIsim{
                             if let urunAdi = document.get("urunAdi") as? String{
-                                
                                 self.urunName.append(urunAdi)
-                                
                             }
-                            
                             if let urunImageUrl=document.get("imageUrl") as? String{
                                 self.urunImg.append(urunImageUrl)
-                                
                             }
-                            
                             if let urunFiyat=document.get("urunFiyat") as? String{
                                 self.urunFiyat.append(urunFiyat)
-                               
                             }
-                            
                             self.urunKategoriAdi.append(urunKategoriAdi)
-                            
                             self.urunCollectionView.reloadData()
                         }
-                        
                     }
                 }
             }
